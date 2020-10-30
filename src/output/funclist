@@ -1,0 +1,17 @@
+_setAD: CODE, 1666 0 130
+_readADCH0: CODE, 2314 0 32
+_stampadecine: CODE, 2246 0 34
+i2___awdiv: CODE, 1084 0 304
+_stampadecimi: CODE, 2280 0 34
+_TIMER0: CODE, 1388 0 278
+_restartTIMER0: CODE, 2160 0 50
+_dividicifre: CODE, 1922 0 118
+_stampaunita: CODE, 2210 0 36
+_main: CODE, 1796 0 126
+_setTIMER0CKINT: CODE, 2102 0 58
+___awdiv: CODE, 780 0 304
+_enintTIMER0: CODE, 2346 0 6
+_configPIC: CODE, 2040 0 62
+_enintGLOB: CODE, 2356 0 4
+_onTIMER0: CODE, 2352 0 4
+Total: 1580

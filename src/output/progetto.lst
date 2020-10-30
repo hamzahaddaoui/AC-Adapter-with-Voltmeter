@@ -1,0 +1,2087 @@
+
+
+HI-TECH Software LITE Macro Assembler (PIC18) V9.63PL3 build 4692 
+                                                       Fri Nov 06 10:32:59 2015
+
+HI-TECH Software Omniscient Code Generator build 4692
+     1  000000                     opt subtitle "HI-TECH Software Omniscient Code G
+                                 enerator build 4692"
+     2                           
+     3                           	processor	18F2420
+     4  000000                     porta	equ	0F80h
+     5  000000                     portb	equ	0F81h
+     6  000000                     portc	equ	0F82h
+     7  000000                     portd	equ	0F83h
+     8  000000                     porte	equ	0F84h
+     9  000000                     lata	equ	0F89h
+    10  000000                     latb	equ	0F8Ah
+    11  000000                     latc	equ	0F8Bh
+    12  000000                     latd	equ	0F8Ch
+    13  000000                     late	equ	0F8Dh
+    14  000000                     trisa	equ	0F92h
+    15  000000                     trisb	equ	0F93h
+    16  000000                     trisc	equ	0F94h
+    17  000000                     trisd	equ	0F95h
+    18  000000                     trise	equ	0F96h
+    19  000000                     pie1	equ	0F9Dh
+    20  000000                     pir1	equ	0F9Eh
+    21  000000                     ipr1	equ	0F9Fh
+    22  000000                     pie2	equ	0FA0h
+    23  000000                     pir2	equ	0FA1h
+    24  000000                     ipr2	equ	0FA2h
+    25  000000                     t3con	equ	0FB1h
+    26  000000                     tmr3l	equ	0FB2h
+    27  000000                     tmr3h	equ	0FB3h
+    28  000000                     ccp1con	equ	0FBDh
+    29  000000                     ccpr1l	equ	0FBEh
+    30  000000                     ccpr1h	equ	0FBFh
+    31  000000                     adcon1	equ	0FC1h
+    32  000000                     adcon0	equ	0FC2h
+    33  000000                     adresl	equ	0FC3h
+    34  000000                     adresh	equ	0FC4h
+    35  000000                     sspcon2	equ	0FC5h
+    36  000000                     sspcon1	equ	0FC6h
+    37  000000                     sspstat	equ	0FC7h
+    38  000000                     sspadd	equ	0FC8h
+    39  000000                     sspbuf	equ	0FC9h
+    40  000000                     t2con	equ	0FCAh
+    41  000000                     pr2	equ	0FCBh
+    42  000000                     tmr2	equ	0FCCh
+    43  000000                     t1con	equ	0FCDh
+    44  000000                     tmr1l	equ	0FCEh
+    45  000000                     tmr1h	equ	0FCFh
+    46  000000                     rcon	equ	0FD0h
+    47  000000                     wdtcon	equ	0FD1h
+    48  000000                     lvdcon	equ	0FD2h
+    49  000000                     osccon	equ	0FD3h
+    50  000000                     t0con	equ	0FD5h
+    51  000000                     tmr0l	equ	0FD6h
+    52  000000                     tmr0h	equ	0FD7h
+    53  000000                     status	equ	0FD8h
+    54  000000                     fsr2	equ	0FD9h
+    55  000000                     fsr2l	equ	0FD9h
+    56  000000                     fsr2h	equ	0FDAh
+    57  000000                     plusw2	equ	0FDBh
+    58  000000                     preinc2	equ	0FDCh
+    59  000000                     postdec2	equ	0FDDh
+    60  000000                     postinc2	equ	0FDEh
+    61  000000                     indf2	equ	0FDFh
+    62  000000                     bsr	equ	0FE0h
+    63  000000                     fsr1	equ	0FE1h
+    64  000000                     fsr1l	equ	0FE1h
+    65  000000                     fsr1h	equ	0FE2h
+    66  000000                     plusw1	equ	0FE3h
+    67  000000                     preinc1	equ	0FE4h
+    68  000000                     postdec1	equ	0FE5h
+    69  000000                     postinc1	equ	0FE6h
+    70  000000                     indf1	equ	0FE7h
+    71  000000                     wreg	equ	0FE8h
+    72  000000                     fsr0	equ	0FE9h
+    73  000000                     fsr0l	equ	0FE9h
+    74  000000                     fsr0h	equ	0FEAh
+    75  000000                     plusw0	equ	0FEBh
+    76  000000                     preinc0	equ	0FECh
+    77  000000                     postdec0	equ	0FEDh
+    78  000000                     postinc0	equ	0FEEh
+    79  000000                     indf0	equ	0FEFh
+    80  000000                     intcon3	equ	0FF0h
+    81  000000                     intcon2	equ	0FF1h
+    82  000000                     intcon	equ	0FF2h
+    83  000000                     prod	equ	0FF3h
+    84  000000                     prodl	equ	0FF3h
+    85  000000                     prodh	equ	0FF4h
+    86  000000                     tablat	equ	0FF5h
+    87  000000                     tblptr	equ	0FF6h
+    88  000000                     tblptrl	equ	0FF6h
+    89  000000                     tblptrh	equ	0FF7h
+    90  000000                     tblptru	equ	0FF8h
+    91  000000                     pcl	equ	0FF9h
+    92  000000                     pclat	equ	0FFAh
+    93  000000                     pclath	equ	0FFAh
+    94  000000                     pclatu	equ	0FFBh
+    95  000000                     stkptr	equ	0FFCh
+    96  000000                     tosl	equ	0FFDh
+    97  000000                     tosh	equ	0FFEh
+    98  000000                     tosu	equ	0FFFh
+    99                           	global	__ramtop
+   100                           	global	__accesstop
+   101                           	GLOBAL	__activetblptr
+   102  000000                     __activetblptr	EQU	2
+   103                           	GLOBAL	__smallconst,__Lsmallconst
+   104  000000                     __smallconst	EQU	__Lsmallconst
+   105                           	GLOBAL	__mediumconst,__Lmediumconst
+   106  000000                     __mediumconst	EQU	__Lmediumconst
+   107                           	GLOBAL	__Ldata
+   108  000000                     __Ldata	EQU	0
+   109  000000                     setAD@nbit	equ	?_setAD+0
+   110                           	global	setAD@nbit
+   111  000000                     setAD@nch	equ	?_setAD+1
+   112                           	global	setAD@nch
+   113  000000                     setTIMER0CKINT@usec	equ	?_setTIMER0CKINT+0
+   114                           	global	setTIMER0CKINT@usec
+   115  000000                     ___awdiv@counter	equ	??___awdiv+0
+   116                           	global	___awdiv@counter
+   117  000000                     ___awdiv@sign	equ	??___awdiv+1
+   118                           	global	___awdiv@sign
+   119  000000                     ___awdiv@quotient	equ	??___awdiv+2
+   120                           	global	___awdiv@quotient
+   121  000000                     ___awdiv@dividend	equ	?___awdiv+0
+   122                           	global	___awdiv@dividend
+   123  000000                     ___awdiv@divisor	equ	?___awdiv+2
+   124                           	global	___awdiv@divisor
+   125  000000                     readADCH0@datoAD	equ	??_readADCH0+0
+   126                           	global	readADCH0@datoAD
+   127  000000                     i2___awdiv@counter	equ	??i2___awdiv+0
+   128                           	global	i2___awdiv@counter
+   129  000000                     i2___awdiv@sign	equ	??i2___awdiv+1
+   130                           	global	i2___awdiv@sign
+   131  000000                     i2___awdiv@quotient	equ	??i2___awdiv+2
+   132                           	global	i2___awdiv@quotient
+   133  000000                     i2___awdiv@dividend	equ	?i2___awdiv+0
+   134                           	global	i2___awdiv@dividend
+   135  000000                     i2___awdiv@divisor	equ	?i2___awdiv+2
+   136                           	global	i2___awdiv@divisor
+   137                           ;Data sizes: Strings 0, constant 10, data 0, bss
+                                  0, persistent 0 stack 38
+   138                           	global	_main
+   139                           	global	??_main
+   140                           	global	?_main
+   141                                   psect   text0,class=CODE,space=0,reloc=2
+   142                           
+   143                           	opt lm
+   144                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+   145                           	line	65
+   146  000000                     	__size_of_main	equ	__end_of_main-_main
+   147                           ;progetto.c: 65: void main(void){
+   148                           	
+   149  000704                     _main:		; BSR set to: ?
+   150                           
+   151                           	opt stack 27
+   152                           	line	66
+   153  000704  ECFC  F003         	call	_configPIC	;wreg free
+   154                           	line	67
+   155                           ;progetto.c: 67: setAD (8, 1);
+   156  000708  0101               	movlb	1	; () banked
+   157  00070A  6F00               	movwf	(??_main+0+0)&0ffh
+   158  00070C  0E01               	movlw	low(01h)
+   159  00070E  0101               	movlb	1	; () banked
+   160  000710  0101               	movlb	1	; () banked
+   161  000712  6F03               	movwf	(0+(?_setAD+01h))&0ffh
+   162  000714  0101               	movlb	1	; () banked
+   163  000716  5100               	movf	(??_main+0+0)&0ffh,w
+   164  000718  0101               	movlb	1	; () banked
+   165  00071A  6F01               	movwf	(??_main+1+0)&0ffh
+   166  00071C  0E08               	movlw	low(08h)
+   167  00071E  0101               	movlb	1	; () banked
+   168  000720  0101               	movlb	1	; () banked
+   169  000722  6F02               	movwf	((?_setAD))&0ffh
+   170  000724  0101               	movlb	1	; () banked
+   171  000726  5101               	movf	(??_main+1+0)&0ffh,w
+   172  000728  EC41  F003         	call	_setAD	;wreg free
+   173                           	line	68
+   174                           ;progetto.c: 68: setTIMER0CKINT (2000);
+   175  00072C  0ED0               	movlw	low(07D0h)
+   176  00072E  0101               	movlb	1	; () banked
+   177  000730  0101               	movlb	1	; () banked
+   178  000732  6F02               	movwf	((?_setTIMER0CKINT))&0ffh
+   179  000734  0E07               	movlw	high(07D0h)
+   180  000736  0101               	movlb	1	; () banked
+   181  000738  6F03               	movwf	((?_setTIMER0CKINT+1))&0ffh
+   182  00073A  EC1B  F004         	call	_setTIMER0CKINT	;wreg free
+   183                           	line	69
+   184                           ;progetto.c: 69: enintGLOB();
+   185  00073E  EC9A  F004         	call	_enintGLOB	;wreg free
+   186                           	line	70
+   187                           ;progetto.c: 70: enintTIMER0();
+   188  000742  EC95  F004         	call	_enintTIMER0	;wreg free
+   189                           	line	71
+   190                           ;progetto.c: 71: onTIMER0();
+   191  000746  EC98  F004         	call	_onTIMER0	;wreg free
+   192                           	line	73
+   193                           ;progetto.c: 73: stato=0;
+   194  00074A  0101               	movlb	1	; () banked
+   195  00074C  6F00               	movwf	(??_main+0+0)&0ffh
+   196  00074E  0E00               	movlw	low(0)
+   197  000750  6E00               	movwf	((c:0)),c
+   198  000752  0101               	movlb	1	; () banked
+   199  000754  5100               	movf	(??_main+0+0)&0ffh,w
+   200                           	line	74
+   201                           ;progetto.c: 74: tensione=0;
+   202  000756  0101               	movlb	1	; () banked
+   203  000758  6F00               	movwf	(??_main+0+0)&0ffh
+   204  00075A  0E00               	movlw	low(0)
+   205  00075C  6E05               	movwf	((c:5)),c
+   206  00075E  0101               	movlb	1	; () banked
+   207  000760  5100               	movf	(??_main+0+0)&0ffh,w
+   208                           	line	75
+   209                           ;progetto.c: 75: var=0;
+   210  000762  0E00               	movlw	low(0)
+   211  000764  6E07               	movwf	((c:7)),c
+   212  000766  0E00               	movlw	high(0)
+   213  000768  6E08               	movwf	((c:7+1)),c
+   214                           	line	76
+   215                           ;progetto.c: 76: i=0;
+   216  00076A  0101               	movlb	1	; () banked
+   217  00076C  6F00               	movwf	(??_main+0+0)&0ffh
+   218  00076E  0E00               	movlw	low(0)
+   219  000770  6E01               	movwf	((c:1)),c
+   220  000772  0101               	movlb	1	; () banked
+   221  000774  5100               	movf	(??_main+0+0)&0ffh,w
+   222                           	line	77
+   223                           ;progetto.c: 77: while(1){
+   224                           	
+   225  000776                     l126:		; BSR set to: ?
+   226                           
+   227                           	line	78
+   228                           # 78 "C:\Users\Consonni.09099\Desktop\Voltmetro_
+                                 18F2580_18F2420\progetto.c"
+   229  000776  F000                nop ;#
+   230                           	line	79
+   231                           # 79 "C:\Users\Consonni.09099\Desktop\Voltmetro_
+                                 18F2580_18F2420\progetto.c"
+   232  000778  F000                nop ;#
+   233                           	line	80
+   234                           # 80 "C:\Users\Consonni.09099\Desktop\Voltmetro_
+                                 18F2580_18F2420\progetto.c"
+   235  00077A  F000                nop ;#
+   236                                   psect   text0
+   237                           	line	81
+   238                           ;progetto.c: 78: asm(" nop");
+   239                           ;progetto.c: 79: asm(" nop");
+   240                           ;progetto.c: 80: asm(" nop");
+   241                           	
+   242  00077C                     l125:		; BSR set to: ?
+   243                           
+   244                           	line	77
+   245  00077C  D7FC               	goto	l126
+   246                           	global	start
+   247  00077E  EF0C  F000         	goto	start
+   248                           	opt stack 0
+   249                           GLOBAL __end_of_main
+   250  000782                     	__end_of_main:
+   251                           	FNSIZE	_main,2,0
+   252                           ; =============== function _main ends ==========
+                                 ==
+   253                           
+   254                                   psect   text1,class=CODE,space=0,reloc=2
+   255                           	line	82
+   256                           
+   257                           	opt lm
+   258                           	signat	_main,88
+   259                           	global	_enintGLOB
+   260                           	global	??_enintGLOB
+   261                           	global	?_enintGLOB
+   262                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+   263                           	line	68
+   264  000000                     	__size_of_enintGLOB	equ	__end_of_enintGLOB-_eni
+                                 ntGLOB
+   265                           ;CONFIG2420.c: 68: void enintGLOB(){
+   266                           	
+   267  000934                     _enintGLOB:		; BSR set to: ?
+   268                           
+   269                           	opt stack 26
+   270                           	line	69
+   271  000934  8EF2               	bsf	c:(32663/8),(32663)&7
+   272                           	line	70
+   273                           ;CONFIG2420.c: 70: }
+   274  000936                     l121:
+   275                           			; BSR set to: ?
+   276                           
+   277  000936  0012               	return
+   278                           	opt stack 0
+   279                           GLOBAL __end_of_enintGLOB
+   280  000938                     	__end_of_enintGLOB:
+   281                           	FNSIZE	_enintGLOB,0,0
+   282                           ; =============== function _enintGLOB ends =====
+                                 =======
+   283                           
+   284                           	signat	_enintGLOB,88
+   285                           	global	_enintTIMER0
+   286                           	global	??_enintTIMER0
+   287                           	global	?_enintTIMER0
+   288                                   psect   text2,class=CODE,space=0,reloc=2
+   289                           
+   290                           	opt lm
+   291                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+   292                           	line	72
+   293  000000                     	__size_of_enintTIMER0	equ	__end_of_enintTIMER0-
+                                 _enintTIMER0
+   294                           ;CONFIG2420.c: 72: void enintTIMER0(){
+   295                           	
+   296  00092A                     _enintTIMER0:		; BSR set to: ?
+   297                           
+   298                           	opt stack 26
+   299                           	line	73
+   300                           ;CONFIG2420.c: 73: TMR0IE=1;
+   301  00092A  8AF2               	bsf	c:(32661/8),(32661)&7
+   302                           	line	74
+   303                           ;CONFIG2420.c: 74: TMR0ON=1;
+   304  00092C  8ED5               	bsf	c:(32431/8),(32431)&7
+   305                           	line	75
+   306                           ;CONFIG2420.c: 75: }
+   307  00092E                     l122:
+   308                           			; BSR set to: ?
+   309                           
+   310  00092E  0012               	return
+   311                           	opt stack 0
+   312                           GLOBAL __end_of_enintTIMER0
+   313  000930                     	__end_of_enintTIMER0:
+   314                           	FNSIZE	_enintTIMER0,0,0
+   315                           ; =============== function _enintTIMER0 ends ===
+                                 =========
+   316                           
+   317                           	signat	_enintTIMER0,88
+   318                           	global	_onTIMER0
+   319                           	global	??_onTIMER0
+   320                           	global	?_onTIMER0
+   321                                   psect   text3,class=CODE,space=0,reloc=2
+   322                           
+   323                           	opt lm
+   324                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+   325                           	line	77
+   326  000000                     	__size_of_onTIMER0	equ	__end_of_onTIMER0-_onTIM
+                                 ER0
+   327                           ;CONFIG2420.c: 77: void onTIMER0(){
+   328                           	
+   329  000930                     _onTIMER0:		; BSR set to: ?
+   330                           
+   331                           	opt stack 26
+   332                           	line	78
+   333                           ;CONFIG2420.c: 78: TMR0ON=1;
+   334  000930  8ED5               	bsf	c:(32431/8),(32431)&7
+   335                           	line	79
+   336                           ;CONFIG2420.c: 79: }
+   337  000932                     l123:
+   338                           			; BSR set to: ?
+   339                           
+   340  000932  0012               	return
+   341                           	opt stack 0
+   342                           GLOBAL __end_of_onTIMER0
+   343  000934                     	__end_of_onTIMER0:
+   344                           	FNSIZE	_onTIMER0,0,0
+   345                           ; =============== function _onTIMER0 ends ======
+                                 ======
+   346                           
+   347                           	signat	_onTIMER0,88
+   348                           	global	_setAD
+   349                           	global	??_setAD
+   350                           	global	?_setAD
+   351                                   psect   text4,class=CODE,space=0,reloc=2
+   352                           
+   353                           	opt lm
+   354                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+   355                           	line	53
+   356  000000                     	__size_of_setAD	equ	__end_of_setAD-_setAD
+   357                           ;CONFIG2420.c: 53: void setAD(char nbit, char nc
+                                 h){
+   358                           	
+   359  000682                     _setAD:		; BSR set to: ?
+   360                           
+   361                           	opt stack 26
+   362                           	line	54
+   363                           ;CONFIG2420.c: 54: ADCON0=0b00000001;
+   364  000682  0E01               	movlw	low(01h)
+   365  000684  6EC2               	movwf	((c:4034)),c	;volatile
+   366                           	line	57
+   367                           ;CONFIG2420.c: 57: if(nbit==8)ADCON2=0b00100010;
+   368  000686  0101               	movlb	1	; () banked
+   369  000688  0101               	movlb	1	; () banked
+   370  00068A  5102               	movf	((setAD@nbit))&0ffh,w
+   371  00068C  0A08               	xorlw	8
+   372                           
+   373  00068E  A4D8               	btfss	status,2
+   374  000690  D001               	goto	u171
+   375  000692  D001               	goto	u170
+   376  000694                     u171:
+   377  000694  D007               	goto	l113
+   378  000696                     u170:
+   379  000696  0101               	movlb	1	; () banked
+   380  000698  6F04               	movwf	(??_setAD+0+0)&0ffh
+   381  00069A  0E22               	movlw	low(022h)
+   382  00069C  6EC0               	movwf	((c:4032)),c
+   383  00069E  0101               	movlb	1	; () banked
+   384  0006A0  5104               	movf	(??_setAD+0+0)&0ffh,w
+   385  0006A2  D006               	goto	l114
+   386                           	line	58
+   387                           	
+   388  0006A4                     l113:		; BSR set to: ?
+   389                           
+   390                           ;CONFIG2420.c: 58: else ADCON2=0b10100010;
+   391  0006A4  0101               	movlb	1	; () banked
+   392  0006A6  6F04               	movwf	(??_setAD+0+0)&0ffh
+   393  0006A8  0EA2               	movlw	low(0A2h)
+   394  0006AA  6EC0               	movwf	((c:4032)),c
+   395  0006AC  0101               	movlb	1	; () banked
+   396  0006AE  5104               	movf	(??_setAD+0+0)&0ffh,w
+   397                           	
+   398  0006B0                     l114:		; BSR set to: ?
+   399                           
+   400                           	line	60
+   401                           ;CONFIG2420.c: 60: switch (nch){
+   402  0006B0  D01C               	goto	l116
+   403                           	line	61
+   404                           ;CONFIG2420.c: 61: case 1: ADCON1=0b00001110;bre
+                                 ak;
+   405                           	
+   406  0006B2                     l117:		; BSR set to: ?
+   407                           
+   408  0006B2  0101               	movlb	1	; () banked
+   409  0006B4  6F04               	movwf	(??_setAD+0+0)&0ffh
+   410  0006B6  0E0E               	movlw	low(0Eh)
+   411  0006B8  6EC1               	movwf	((c:4033)),c
+   412  0006BA  0101               	movlb	1	; () banked
+   413  0006BC  5104               	movf	(??_setAD+0+0)&0ffh,w
+   414  0006BE  D021               	goto	l115
+   415                           	line	62
+   416                           ;CONFIG2420.c: 62: case 2: ADCON1=0b00001101;bre
+                                 ak;
+   417                           	
+   418  0006C0                     l118:		; BSR set to: ?
+   419                           
+   420  0006C0  0101               	movlb	1	; () banked
+   421  0006C2  6F04               	movwf	(??_setAD+0+0)&0ffh
+   422  0006C4  0E0D               	movlw	low(0Dh)
+   423  0006C6  6EC1               	movwf	((c:4033)),c
+   424  0006C8  0101               	movlb	1	; () banked
+   425  0006CA  5104               	movf	(??_setAD+0+0)&0ffh,w
+   426  0006CC  D01A               	goto	l115
+   427                           	line	63
+   428                           ;CONFIG2420.c: 63: case 3: ADCON1=0b00001100;bre
+                                 ak;
+   429                           	
+   430  0006CE                     l119:		; BSR set to: ?
+   431                           
+   432  0006CE  0101               	movlb	1	; () banked
+   433  0006D0  6F04               	movwf	(??_setAD+0+0)&0ffh
+   434  0006D2  0E0C               	movlw	low(0Ch)
+   435  0006D4  6EC1               	movwf	((c:4033)),c
+   436  0006D6  0101               	movlb	1	; () banked
+   437  0006D8  5104               	movf	(??_setAD+0+0)&0ffh,w
+   438  0006DA  D013               	goto	l115
+   439                           	line	64
+   440                           ;CONFIG2420.c: 64: case 4: ADCON1=0b00001011;bre
+                                 ak;
+   441                           	
+   442  0006DC                     l120:		; BSR set to: ?
+   443                           
+   444  0006DC  0101               	movlb	1	; () banked
+   445  0006DE  6F04               	movwf	(??_setAD+0+0)&0ffh
+   446  0006E0  0E0B               	movlw	low(0Bh)
+   447  0006E2  6EC1               	movwf	((c:4033)),c
+   448  0006E4  0101               	movlb	1	; () banked
+   449  0006E6  5104               	movf	(??_setAD+0+0)&0ffh,w
+   450  0006E8  D00C               	goto	l115
+   451                           	line	60
+   452                           	
+   453  0006EA                     l116:		; BSR set to: ?
+   454                           
+   455  0006EA  0101               	movlb	1	; () banked
+   456  0006EC  0101               	movlb	1	; () banked
+   457  0006EE  5103               	movf	((setAD@nch))&0ffh,w
+   458  0006F0  0A01               	xorlw	1 ^ 0
+   459  0006F2  E0DF               	bz	l117
+   460  0006F4  0A03               	xorlw	2 ^ 1
+   461  0006F6  E0E4               	bz	l118
+   462  0006F8  0A01               	xorlw	3 ^ 2
+   463  0006FA  E0E9               	bz	l119
+   464  0006FC  0A07               	xorlw	4 ^ 3
+   465  0006FE  E0EE               	bz	l120
+   466  000700  D000               	goto	l115
+   467                           
+   468                           	line	65
+   469                           	
+   470  000702                     l115:		; BSR set to: ?
+   471                           
+   472                           	line	66
+   473                           ;CONFIG2420.c: 66: }
+   474  000702                     l112:
+   475                           			; BSR set to: ?
+   476                           
+   477  000702  0012               	return
+   478                           	opt stack 0
+   479                           GLOBAL __end_of_setAD
+   480  000704                     	__end_of_setAD:
+   481                           	FNSIZE	_setAD,1,2
+   482                           ; =============== function _setAD ends =========
+                                 ===
+   483                           
+   484                           	signat	_setAD,8312
+   485                           	global	_configPIC
+   486                           	global	??_configPIC
+   487                           	global	?_configPIC
+   488                                   psect   text5,class=CODE,space=0,reloc=2
+   489                           
+   490                           	opt lm
+   491                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+   492                           	line	15
+   493  000000                     	__size_of_configPIC	equ	__end_of_configPIC-_con
+                                 figPIC
+   494                           ;CONFIG2420.c: 15: void configPIC (void){
+   495                           	
+   496  0007F8                     _configPIC:		; BSR set to: ?
+   497                           
+   498                           	opt stack 26
+   499                           	line	16
+   500                           ;CONFIG2420.c: 16: LATC=0;
+   501  0007F8  0E00               	movlw	low(0)
+   502  0007FA  6E8B               	movwf	((c:3979)),c	;volatile
+   503                           	line	17
+   504                           ;CONFIG2420.c: 17: TRISC=0;
+   505  0007FC  0E00               	movlw	low(0)
+   506  0007FE  6E94               	movwf	((c:3988)),c	;volatile
+   507                           	line	18
+   508                           ;CONFIG2420.c: 18: LATB=0;
+   509  000800  0E00               	movlw	low(0)
+   510  000802  6E8A               	movwf	((c:3978)),c	;volatile
+   511                           	line	19
+   512                           ;CONFIG2420.c: 19: TRISB=0b11111000;
+   513  000804  0EF8               	movlw	low(0F8h)
+   514  000806  6E93               	movwf	((c:3987)),c	;volatile
+   515                           	line	20
+   516                           ;CONFIG2420.c: 20: OSCCON=0b01100000;
+   517  000808  0E60               	movlw	low(060h)
+   518  00080A  6ED3               	movwf	((c:4051)),c	;volatile
+   519                           	line	21
+   520                           ;CONFIG2420.c: 21: ADCON0=1;
+   521  00080C  0E01               	movlw	low(01h)
+   522  00080E  6EC2               	movwf	((c:4034)),c	;volatile
+   523                           	line	22
+   524                           ;CONFIG2420.c: 22: ADCON1=0b00001110;
+   525  000810  0101               	movlb	1	; () banked
+   526  000812  6F02               	movwf	(??_configPIC+0+0)&0ffh
+   527  000814  0E0E               	movlw	low(0Eh)
+   528  000816  6EC1               	movwf	((c:4033)),c
+   529  000818  0101               	movlb	1	; () banked
+   530  00081A  5102               	movf	(??_configPIC+0+0)&0ffh,w
+   531                           	line	23
+   532                           ;CONFIG2420.c: 23: ADCON2=0b00100100;
+   533  00081C  0101               	movlb	1	; () banked
+   534  00081E  6F02               	movwf	(??_configPIC+0+0)&0ffh
+   535  000820  0E24               	movlw	low(024h)
+   536  000822  6EC0               	movwf	((c:4032)),c
+   537  000824  0101               	movlb	1	; () banked
+   538  000826  5102               	movf	(??_configPIC+0+0)&0ffh,w
+   539                           	line	25
+   540                           ;CONFIG2420.c: 25: TMR0=62;
+   541  000828  0E3E               	movlw	low(03Eh)
+   542  00082A  6ED6               	movwf	((c:4054)),c	;volatile
+   543  00082C  0E00               	movlw	high(03Eh)
+   544  00082E  6ED7               	movwf	((c:4054+1)),c	;volatile
+   545                           	line	26
+   546                           ;CONFIG2420.c: 26: INTCON=0;
+   547  000830  0E00               	movlw	low(0)
+   548  000832  6EF2               	movwf	((c:4082)),c	;volatile
+   549                           	line	27
+   550                           ;CONFIG2420.c: 27: }
+   551  000834                     l105:
+   552                           			; BSR set to: ?
+   553                           
+   554  000834  0012               	return
+   555                           	opt stack 0
+   556                           GLOBAL __end_of_configPIC
+   557  000836                     	__end_of_configPIC:
+   558                           	FNSIZE	_configPIC,1,0
+   559                           ; =============== function _configPIC ends =====
+                                 =======
+   560                           
+   561                           	signat	_configPIC,88
+   562                           	global	_setTIMER0CKINT
+   563                           	global	??_setTIMER0CKINT
+   564                           	global	?_setTIMER0CKINT
+   565                                   psect   text6,class=CODE,space=0,reloc=2
+   566                           
+   567                           	opt lm
+   568                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+   569                           	line	45
+   570  000000                     	__size_of_setTIMER0CKINT	equ	__end_of_setTIMER0
+                                 CKINT-_setTIMER0CKINT
+   571                           ;CONFIG2420.c: 45: void setTIMER0CKINT(usec){
+   572                           	
+   573  000836                     _setTIMER0CKINT:		; BSR set to: ?
+   574                           
+   575                           	opt stack 26
+   576                           	line	46
+   577                           ;CONFIG2420.c: 46: restart=usec;
+   578  000836  C102  F00B         	movff	(setTIMER0CKINT@usec),(c:11)
+   579  00083A  C103  F00C         	movff	(setTIMER0CKINT@usec+1),(c:11+1)
+   580                           	line	47
+   581                           ;CONFIG2420.c: 47: T0CON=0b01000100;
+   582  00083E  0101               	movlb	1	; () banked
+   583  000840  6F04               	movwf	(??_setTIMER0CKINT+0+0)&0ffh
+   584  000842  0E44               	movlw	low(044h)
+   585  000844  6ED5               	movwf	((c:4053)),c
+   586  000846  0101               	movlb	1	; () banked
+   587  000848  5104               	movf	(??_setTIMER0CKINT+0+0)&0ffh,w
+   588                           	line	48
+   589                           ;CONFIG2420.c: 48: TMR0IF=0;
+   590  00084A  94F2               	bcf	c:(32658/8),(32658)&7	;volatile
+   591                           	line	49
+   592                           ;CONFIG2420.c: 49: TMR0=usec/32;
+   593  00084C  0E20               	movlw	low(020h)
+   594  00084E  0101               	movlb	1	; () banked
+   595  000850  0101               	movlb	1	; () banked
+   596  000852  6F07               	movwf	(0+(?___awdiv+02h))&0ffh
+   597  000854  0E00               	movlw	high(020h)
+   598  000856  0101               	movlb	1	; () banked
+   599  000858  6F08               	movwf	(1+(?___awdiv+02h))&0ffh
+   600  00085A  C102  F105         	movff	(setTIMER0CKINT@usec),(?___awdiv)
+   601  00085E  C103  F106         	movff	(setTIMER0CKINT@usec+1),(?___awdiv+1)
+   602  000862  EC86  F001         	call	___awdiv	;wreg free
+   603  000866  C105  FFD6         	movff	0+?___awdiv,(c:4054)	;volatile
+   604  00086A  C106  FFD7         	movff	1+?___awdiv,(c:4054+1)	;volatile
+   605                           	line	50
+   606                           ;CONFIG2420.c: 50: }
+   607  00086E                     l111:
+   608                           			; BSR set to: ?
+   609                           
+   610  00086E  0012               	return
+   611                           	opt stack 0
+   612                           GLOBAL __end_of_setTIMER0CKINT
+   613  000870                     	__end_of_setTIMER0CKINT:
+   614                           	FNSIZE	_setTIMER0CKINT,1,2
+   615                           ; =============== function _setTIMER0CKINT ends 
+                                 ============
+   616                           
+   617                           	signat	_setTIMER0CKINT,88
+   618                           	global	___awdiv
+   619                           	global	??___awdiv
+   620                           	global	?___awdiv
+   621                                   psect   text7,class=CODE,space=0,reloc=2
+   622                           
+   623                           	opt lm
+   624                           	file	"C:\Program Files (x86)\HI-TECH Software\P
+                                 ICC-18\PRO\9.63\sources\awdiv.c"
+   625                           	line	5
+   626  000000                     	__size_of___awdiv	equ	__end_of___awdiv-___awdiv
+   627                           	
+   628  00030C                     ___awdiv:		; BSR set to: ?
+   629                           
+   630                           	opt stack 25
+   631                           	line	9
+   632  00030C  0101               	movlb	1	; () banked
+   633  00030E  6F0D               	movwf	(??___awdiv+4+0)&0ffh
+   634  000310  0E00               	movlw	low(0)
+   635  000312  0101               	movlb	1	; () banked
+   636  000314  0101               	movlb	1	; () banked
+   637  000316  6F0A               	movwf	((___awdiv@sign))&0ffh
+   638  000318  0101               	movlb	1	; () banked
+   639  00031A  510D               	movf	(??___awdiv+4+0)&0ffh,w
+   640                           	line	10
+   641  00031C  0101               	movlb	1	; () banked
+   642  00031E  0101               	movlb	1	; () banked
+   643  000320  AF08               	btfss	((___awdiv@divisor+1))&0ffh,7
+   644  000322  D001               	goto	u1141
+   645  000324  D001               	goto	u1140
+   646  000326                     u1141:
+   647  000326  D00F               	goto	l205
+   648  000328                     u1140:
+   649                           	line	11
+   650  000328  0101               	movlb	1	; () banked
+   651  00032A  0101               	movlb	1	; () banked
+   652  00032C  6D07               	negf	((___awdiv@divisor))&0ffh
+   653  00032E  0101               	movlb	1	; () banked
+   654  000330  1F08               	comf	((___awdiv@divisor+1))&0ffh
+   655  000332  B0D8               	btfsc	status,0
+   656  000334  2B08               	incf	((___awdiv@divisor+1))&0ffh
+   657                           	line	12
+   658  000336  0101               	movlb	1	; () banked
+   659  000338  6F0D               	movwf	(??___awdiv+4+0)&0ffh
+   660  00033A  0E01               	movlw	low(01h)
+   661  00033C  0101               	movlb	1	; () banked
+   662  00033E  0101               	movlb	1	; () banked
+   663  000340  6F0A               	movwf	((___awdiv@sign))&0ffh
+   664  000342  0101               	movlb	1	; () banked
+   665  000344  510D               	movf	(??___awdiv+4+0)&0ffh,w
+   666                           	line	13
+   667                           	
+   668  000346                     l205:		; BSR set to: ?
+   669                           
+   670                           	line	14
+   671  000346  0101               	movlb	1	; () banked
+   672  000348  0101               	movlb	1	; () banked
+   673  00034A  AF06               	btfss	((___awdiv@dividend+1))&0ffh,7
+   674  00034C  D001               	goto	u1151
+   675  00034E  D001               	goto	u1150
+   676  000350                     u1151:
+   677  000350  D00B               	goto	l206
+   678  000352                     u1150:
+   679                           	line	15
+   680  000352  0101               	movlb	1	; () banked
+   681  000354  0101               	movlb	1	; () banked
+   682  000356  6D05               	negf	((___awdiv@dividend))&0ffh
+   683  000358  0101               	movlb	1	; () banked
+   684  00035A  1F06               	comf	((___awdiv@dividend+1))&0ffh
+   685  00035C  B0D8               	btfsc	status,0
+   686  00035E  2B06               	incf	((___awdiv@dividend+1))&0ffh
+   687                           	line	16
+   688  000360  0E01               	movlw	(01h)&0ffh
+   689  000362  0101               	movlb	1	; () banked
+   690  000364  0101               	movlb	1	; () banked
+   691  000366  1B0A               	xorwf	((___awdiv@sign))&0ffh
+   692                           	line	17
+   693                           	
+   694  000368                     l206:		; BSR set to: ?
+   695                           
+   696                           	line	18
+   697  000368  0E00               	movlw	low(0)
+   698  00036A  0101               	movlb	1	; () banked
+   699  00036C  0101               	movlb	1	; () banked
+   700  00036E  6F0B               	movwf	((___awdiv@quotient))&0ffh
+   701  000370  0E00               	movlw	high(0)
+   702  000372  0101               	movlb	1	; () banked
+   703  000374  6F0C               	movwf	((___awdiv@quotient+1))&0ffh
+   704                           	line	19
+   705  000376  0101               	movlb	1	; () banked
+   706  000378  0101               	movlb	1	; () banked
+   707  00037A  5108               	movf	((___awdiv@divisor+1))&0ffh,w
+   708  00037C  1107               	iorwf ((___awdiv@divisor))&0ffh,w
+   709                           
+   710  00037E  B4D8               	btfsc	status,2
+   711  000380  D001               	goto	u1161
+   712  000382  D001               	goto	u1160
+   713  000384                     u1161:
+   714  000384  D047               	goto	l207
+   715  000386                     u1160:
+   716                           	line	20
+   717  000386  0101               	movlb	1	; () banked
+   718  000388  6F0D               	movwf	(??___awdiv+4+0)&0ffh
+   719  00038A  0E01               	movlw	low(01h)
+   720  00038C  0101               	movlb	1	; () banked
+   721  00038E  0101               	movlb	1	; () banked
+   722  000390  6F09               	movwf	((___awdiv@counter))&0ffh
+   723  000392  0101               	movlb	1	; () banked
+   724  000394  510D               	movf	(??___awdiv+4+0)&0ffh,w
+   725                           	line	21
+   726  000396  D009               	goto	l208
+   727                           	
+   728  000398                     l209:		; BSR set to: ?
+   729                           
+   730                           	line	22
+   731  000398  0101               	movlb	1	; () banked
+   732  00039A  90D8               	bcf	status,0
+   733  00039C  0101               	movlb	1	; () banked
+   734  00039E  3707               	rlcf	((___awdiv@divisor))&0ffh
+   735  0003A0  0101               	movlb	1	; () banked
+   736  0003A2  3708               	rlcf	((___awdiv@divisor+1))&0ffh
+   737                           	line	23
+   738  0003A4  0101               	movlb	1	; () banked
+   739  0003A6  0101               	movlb	1	; () banked
+   740  0003A8  2B09               	incf	((___awdiv@counter))&0ffh
+   741                           	line	24
+   742                           	
+   743  0003AA                     l208:		; BSR set to: ?
+   744                           
+   745                           	line	21
+   746  0003AA  0101               	movlb	1	; () banked
+   747                           	
+   748  0003AC  0101               	movlb	1	; () banked
+   749  0003AE  AF08               	btfss	((___awdiv@divisor+1))&0ffh,(15)&7
+   750  0003B0  D001               	goto	u1171
+   751  0003B2  D001               	goto	u1170
+   752  0003B4                     u1171:
+   753  0003B4  D7F1               	goto	l209
+   754  0003B6                     u1170:
+   755                           	
+   756  0003B6                     l210:		; BSR set to: ?
+   757                           
+   758                           	line	25
+   759                           	
+   760  0003B6                     l213:		; BSR set to: ?
+   761                           
+   762                           	line	26
+   763  0003B6  0101               	movlb	1	; () banked
+   764  0003B8  90D8               	bcf	status,0
+   765  0003BA  0101               	movlb	1	; () banked
+   766  0003BC  370B               	rlcf	((___awdiv@quotient))&0ffh
+   767  0003BE  0101               	movlb	1	; () banked
+   768  0003C0  370C               	rlcf	((___awdiv@quotient+1))&0ffh
+   769                           	line	27
+   770  0003C2  0101               	movlb	1	; () banked
+   771  0003C4  0101               	movlb	1	; () banked
+   772  0003C6  5107               	movf	((___awdiv@divisor))&0ffh,w
+   773  0003C8  0101               	movlb	1	; () banked
+   774  0003CA  0101               	movlb	1	; () banked
+   775  0003CC  5D05               	subwf	((___awdiv@dividend))&0ffh,w
+   776  0003CE  0101               	movlb	1	; () banked
+   777  0003D0  0101               	movlb	1	; () banked
+   778  0003D2  5108               	movf	((___awdiv@divisor+1))&0ffh,w
+   779  0003D4  0101               	movlb	1	; () banked
+   780  0003D6  0101               	movlb	1	; () banked
+   781  0003D8  5906               	subwfb	((___awdiv@dividend+1))&0ffh,w
+   782  0003DA  A0D8               	btfss	status,0
+   783  0003DC  D001               	goto	u1181
+   784  0003DE  D001               	goto	u1180
+   785  0003E0                     u1181:
+   786  0003E0  D00F               	goto	l214
+   787  0003E2                     u1180:
+   788                           	line	28
+   789  0003E2  0101               	movlb	1	; () banked
+   790  0003E4  0101               	movlb	1	; () banked
+   791  0003E6  5107               	movf	((___awdiv@divisor))&0ffh,w
+   792  0003E8  0101               	movlb	1	; () banked
+   793  0003EA  0101               	movlb	1	; () banked
+   794  0003EC  5F05               	subwf	((___awdiv@dividend))&0ffh
+   795  0003EE  0101               	movlb	1	; () banked
+   796  0003F0  0101               	movlb	1	; () banked
+   797  0003F2  5108               	movf	((___awdiv@divisor+1))&0ffh,w
+   798  0003F4  0101               	movlb	1	; () banked
+   799  0003F6  0101               	movlb	1	; () banked
+   800  0003F8  5B06               	subwfb	((___awdiv@dividend+1))&0ffh
+   801                           
+   802                           	line	29
+   803  0003FA  0101               	movlb	1	; () banked
+   804  0003FC  0101               	movlb	1	; () banked
+   805  0003FE  810B               	bsf	(0+(0/8)+(___awdiv@quotient))&0ffh,(0)&7
+   806                           	line	30
+   807                           	
+   808  000400                     l214:		; BSR set to: ?
+   809                           
+   810                           	line	31
+   811  000400  0101               	movlb	1	; () banked
+   812  000402  90D8               	bcf	status,0
+   813  000404  0101               	movlb	1	; () banked
+   814  000406  3308               	rrcf	((___awdiv@divisor+1))&0ffh
+   815  000408  0101               	movlb	1	; () banked
+   816  00040A  3307               	rrcf	((___awdiv@divisor))&0ffh
+   817                           	line	32
+   818  00040C  0101               	movlb	1	; () banked
+   819  00040E  0101               	movlb	1	; () banked
+   820  000410  2F09               	decfsz	((___awdiv@counter))&0ffh
+   821                           	
+   822  000412  D7D1               	goto	l213
+   823                           	
+   824  000414                     l212:		; BSR set to: ?
+   825                           
+   826                           	line	33
+   827                           	
+   828  000414                     l207:		; BSR set to: ?
+   829                           
+   830                           	line	34
+   831  000414  0101               	movlb	1	; () banked
+   832  000416  0101               	movlb	1	; () banked
+   833  000418  510A               	movf	((___awdiv@sign))&0ffh,w
+   834  00041A  B4D8               	btfsc	status,2
+   835  00041C  D001               	goto	u1191
+   836  00041E  D001               	goto	u1190
+   837  000420                     u1191:
+   838  000420  D007               	goto	l215
+   839  000422                     u1190:
+   840                           	line	35
+   841  000422  0101               	movlb	1	; () banked
+   842  000424  0101               	movlb	1	; () banked
+   843  000426  6D0B               	negf	((___awdiv@quotient))&0ffh
+   844  000428  0101               	movlb	1	; () banked
+   845  00042A  1F0C               	comf	((___awdiv@quotient+1))&0ffh
+   846  00042C  B0D8               	btfsc	status,0
+   847  00042E  2B0C               	incf	((___awdiv@quotient+1))&0ffh
+   848                           	
+   849  000430                     l215:		; BSR set to: ?
+   850                           
+   851                           	line	36
+   852  000430  C10B  F105         	movff	(___awdiv@quotient),(?___awdiv)
+   853  000434  C10C  F106         	movff	(___awdiv@quotient+1),(?___awdiv+1)
+   854  000438  D000               	goto	l204
+   855                           	line	37
+   856  00043A                     l204:
+   857                           			; BSR set to: ?
+   858                           
+   859  00043A  0012               	return
+   860                           	opt stack 0
+   861                           GLOBAL __end_of___awdiv
+   862  00043C                     	__end_of___awdiv:
+   863                           	FNSIZE	___awdiv,5,4
+   864                           ; =============== function ___awdiv ends =======
+                                 =====
+   865                           
+   866                           	signat	___awdiv,8314
+   867                           	global	_TIMER0
+   868                           	global	??_TIMER0
+   869                           	global	?_TIMER0
+   870                                   psect   text8,class=CODE,space=0,reloc=2
+   871                           
+   872                           	opt lm
+   873                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+   874                           	line	86
+   875  000000                     	__size_of_TIMER0	equ	__end_of_TIMER0-_TIMER0
+   876                           ;progetto.c: 86: void interrupt TIMER0(){
+   877                           	
+   878  00056C                     _TIMER0:		; BSR set to: ?
+   879                           
+   880  00056C  0006               	pop	; remove dummy address from shadow register
+                                  refresh
+   881                           
+   882                           	opt stack 30
+   883                                   psect   intcode,class=CODE,space=0,reloc
+                                 =2
+   884                           	global	int_func
+   885  000008                     int_func:
+   886                                   psect   intcode
+   887  000008  CFFA F10F          	movff	pclat+0,??_TIMER0+1
+   888  00000C  CFFB F110          	movff	pclat+1,??_TIMER0+2
+   889  000010  CFE9 F111          	movff	fsr0l+0,??_TIMER0+3
+   890  000014  EDB6  F002         	call	_TIMER0,f	;refresh shadow registers
+   891                                   psect   text8
+   892  00056E  CFEA F112          	movff	fsr0h+0,??_TIMER0+4
+   893  000572  CFE1 F113          	movff	fsr1l+0,??_TIMER0+5
+   894  000576  CFE2 F114          	movff	fsr1h+0,??_TIMER0+6
+   895  00057A  CFD9 F115          	movff	fsr2l+0,??_TIMER0+7
+   896  00057E  CFDA F116          	movff	fsr2h+0,??_TIMER0+8
+   897  000582  CFF3 F117          	movff	prodl+0,??_TIMER0+9
+   898  000586  CFF4 F118          	movff	prodh+0,??_TIMER0+10
+   899  00058A  CFF6 F119          	movff	tblptrl+0,??_TIMER0+11
+   900  00058E  CFF7 F11A          	movff	tblptrh+0,??_TIMER0+12
+   901  000592  CFF8 F11B          	movff	tblptru+0,??_TIMER0+13
+   902                           	line	88
+   903  000596  EC38  F004         	call	_restartTIMER0	;wreg free
+   904                           	line	90
+   905                           ;progetto.c: 90: switch (stato){
+   906  00059A  D041               	goto	i2l130
+   907                           	line	91
+   908                           ;progetto.c: 91: case 0:
+   909                           	
+   910  00059C                     i2l131:		; BSR set to: ?
+   911                           
+   912                           	line	92
+   913                           ;progetto.c: 92: LATB0=1;LATB1=1 ;LATB2=1;
+   914  00059C  808A               	bsf	c:(31824/8),(31824)&7	;volatile
+   915  00059E  828A               	bsf	c:(31825/8),(31825)&7	;volatile
+   916  0005A0  848A               	bsf	c:(31826/8),(31826)&7	;volatile
+   917                           	line	93
+   918                           ;progetto.c: 93: var=(var+readADCH0());
+   919  0005A2  EC85  F004         	call	_readADCH0	;wreg free
+   920  0005A6  0101               	movlb	1	; () banked
+   921  0005A8  6F0E               	movwf	(??_TIMER0+0+0)&0ffh
+   922  0005AA  0101               	movlb	1	; () banked
+   923  0005AC  510E               	movf	((??_TIMER0+0+0))&0ffh,w
+   924  0005AE  2407               	addwf	((c:7)),c,w
+   925                           	
+   926  0005B0  6E07               	movwf	((c:7)),c
+   927  0005B2  0E00               	movlw	0
+   928  0005B4  2008               	addwfc	((c:7+1)),c,w
+   929  0005B6  6E08               	movwf	1+((c:7)),c
+   930                           	line	95
+   931                           ;progetto.c: 95: i++;
+   932  0005B8  2A01               	incf	((c:1)),c
+   933                           	line	97
+   934                           ;progetto.c: 97: if (i==40){
+   935  0005BA  5001               	movf	((c:1)),c,w
+   936  0005BC  0A28               	xorlw	40
+   937                           
+   938  0005BE  A4D8               	btfss	status,2
+   939  0005C0  D001               	goto	i2u1071
+   940  0005C2  D001               	goto	i2u1070
+   941  0005C4                     i2u1071:
+   942  0005C4  D01D               	goto	i2l132
+   943  0005C6                     i2u1070:
+   944                           	line	98
+   945                           ;progetto.c: 98: i=0;
+   946  0005C6  0101               	movlb	1	; () banked
+   947  0005C8  6F0E               	movwf	(??_TIMER0+0+0)&0ffh
+   948  0005CA  0E00               	movlw	low(0)
+   949  0005CC  6E01               	movwf	((c:1)),c
+   950  0005CE  0101               	movlb	1	; () banked
+   951  0005D0  510E               	movf	(??_TIMER0+0+0)&0ffh,w
+   952                           	line	99
+   953                           ;progetto.c: 99: tensione=var/40;
+   954  0005D2  0E28               	movlw	low(028h)
+   955  0005D4  0101               	movlb	1	; () banked
+   956  0005D6  0101               	movlb	1	; () banked
+   957  0005D8  6F1F               	movwf	(0+(?i2___awdiv+02h))&0ffh
+   958  0005DA  0E00               	movlw	high(028h)
+   959  0005DC  0101               	movlb	1	; () banked
+   960  0005DE  6F20               	movwf	(1+(?i2___awdiv+02h))&0ffh
+   961  0005E0  C007 F11D          	movff	(c:7),(?i2___awdiv)
+   962  0005E4  C008 F11E          	movff	(c:7+1),(?i2___awdiv+1)
+   963  0005E8  EC1E  F002         	call	i2___awdiv	;wreg free
+   964  0005EC  0101               	movlb	1	; () banked
+   965  0005EE  0101               	movlb	1	; () banked
+   966  0005F0  511D               	movf	(0+?i2___awdiv)&0ffh,w
+   967  0005F2  6E05               	movwf	((c:5)),c
+   968                           	line	100
+   969                           ;progetto.c: 100: var=0;
+   970  0005F4  0E00               	movlw	low(0)
+   971  0005F6  6E07               	movwf	((c:7)),c
+   972  0005F8  0E00               	movlw	high(0)
+   973  0005FA  6E08               	movwf	((c:7+1)),c
+   974                           	line	101
+   975                           ;progetto.c: 101: dividicifre();
+   976  0005FC  ECC1  F003         	call	_dividicifre	;wreg free
+   977                           	line	102
+   978                           	
+   979  000600                     i2l132:		; BSR set to: ?
+   980                           
+   981                           	line	105
+   982                           ;progetto.c: 102: }
+   983                           ;progetto.c: 105: break;
+   984  000600  D018               	goto	i2l129
+   985                           	line	107
+   986                           ;progetto.c: 107: case 1:
+   987                           	
+   988  000602                     i2l133:		; BSR set to: ?
+   989                           
+   990                           	line	108
+   991                           ;progetto.c: 108: stampadecine();
+   992  000602  EC63  F004         	call	_stampadecine	;wreg free
+   993                           	line	109
+   994                           ;progetto.c: 109: LATB0=0;
+   995  000606  908A               	bcf	c:(31824/8),(31824)&7	;volatile
+   996                           	line	110
+   997                           ;progetto.c: 110: break;
+   998  000608  D014               	goto	i2l129
+   999                           	line	112
+  1000                           ;progetto.c: 112: case 2:
+  1001                           	
+  1002  00060A                     i2l134:		; BSR set to: ?
+  1003                           
+  1004                           	line	113
+  1005                           ;progetto.c: 113: LATB0=1;
+  1006  00060A  808A               	bsf	c:(31824/8),(31824)&7	;volatile
+  1007                           	line	114
+  1008                           ;progetto.c: 114: stampaunita();
+  1009  00060C  EC51  F004         	call	_stampaunita	;wreg free
+  1010                           	line	115
+  1011                           ;progetto.c: 115: LATB1=0;
+  1012  000610  928A               	bcf	c:(31825/8),(31825)&7	;volatile
+  1013                           	line	116
+  1014                           ;progetto.c: 116: break;
+  1015  000612  D00F               	goto	i2l129
+  1016                           	line	118
+  1017                           ;progetto.c: 118: case 3:
+  1018                           	
+  1019  000614                     i2l135:		; BSR set to: ?
+  1020                           
+  1021                           	line	119
+  1022                           ;progetto.c: 119: LATB1=1;
+  1023  000614  828A               	bsf	c:(31825/8),(31825)&7	;volatile
+  1024                           	line	120
+  1025                           ;progetto.c: 120: stampadecimi();
+  1026  000616  EC74  F004         	call	_stampadecimi	;wreg free
+  1027                           	line	121
+  1028                           ;progetto.c: 121: LATB2=0;
+  1029  00061A  948A               	bcf	c:(31826/8),(31826)&7	;volatile
+  1030                           	line	122
+  1031                           ;progetto.c: 122: break;
+  1032  00061C  D00A               	goto	i2l129
+  1033                           	line	90
+  1034                           	
+  1035  00061E                     i2l130:		; BSR set to: ?
+  1036                           
+  1037  00061E  5000               	movf	((c:0)),c,w
+  1038  000620  0A00               	xorlw	0 ^ 0
+  1039  000622  E0BC               	bz	i2l131
+  1040  000624  0A01               	xorlw	1 ^ 0
+  1041  000626  E0ED               	bz	i2l133
+  1042  000628  0A03               	xorlw	2 ^ 1
+  1043  00062A  E0EF               	bz	i2l134
+  1044  00062C  0A01               	xorlw	3 ^ 2
+  1045  00062E  E0F2               	bz	i2l135
+  1046  000630  D000               	goto	i2l129
+  1047                           
+  1048                           	line	123
+  1049                           	
+  1050  000632                     i2l129:		; BSR set to: ?
+  1051                           
+  1052                           	line	125
+  1053                           ;progetto.c: 125: if (stato<3) stato++; else sta
+                                 to=0;
+  1054  000632  0E03               	movlw	(03h)&0ffh
+  1055  000634  6000               	cpfslt	((c:0)),c
+  1056  000636  D001               	goto	i2u1081
+  1057  000638  D001               	goto	i2u1080
+  1058  00063A                     i2u1081:
+  1059  00063A  D002               	goto	i2l136
+  1060  00063C                     i2u1080:
+  1061  00063C  2A00               	incf	((c:0)),c
+  1062  00063E  D006               	goto	i2l137
+  1063                           	
+  1064  000640                     i2l136:		; BSR set to: ?
+  1065                           
+  1066  000640  0101               	movlb	1	; () banked
+  1067  000642  6F0E               	movwf	(??_TIMER0+0+0)&0ffh
+  1068  000644  0E00               	movlw	low(0)
+  1069  000646  6E00               	movwf	((c:0)),c
+  1070  000648  0101               	movlb	1	; () banked
+  1071  00064A  510E               	movf	(??_TIMER0+0+0)&0ffh,w
+  1072                           	
+  1073  00064C                     i2l137:		; BSR set to: ?
+  1074                           
+  1075                           	line	127
+  1076                           ;progetto.c: 127: }
+  1077  00064C                     i2l128:
+  1078                           			; BSR set to: ?
+  1079                           
+  1080  00064C  C11B  FFF8         	movff	??_TIMER0+13,tblptru+0
+  1081  000650  C11A  FFF7         	movff	??_TIMER0+12,tblptrh+0
+  1082  000654  C119  FFF6         	movff	??_TIMER0+11,tblptrl+0
+  1083  000658  C118  FFF4         	movff	??_TIMER0+10,prodh+0
+  1084  00065C  C117  FFF3         	movff	??_TIMER0+9,prodl+0
+  1085  000660  C116  FFDA         	movff	??_TIMER0+8,fsr2h+0
+  1086  000664  C115  FFD9         	movff	??_TIMER0+7,fsr2l+0
+  1087  000668  C114  FFE2         	movff	??_TIMER0+6,fsr1h+0
+  1088  00066C  C113  FFE1         	movff	??_TIMER0+5,fsr1l+0
+  1089  000670  C112  FFEA         	movff	??_TIMER0+4,fsr0h+0
+  1090  000674  C111  FFE9         	movff	??_TIMER0+3,fsr0l+0
+  1091  000678  C110  FFFB         	movff	??_TIMER0+2,pclat+1
+  1092  00067C  C10F  FFFA         	movff	??_TIMER0+1,pclat+0
+  1093  000680  0011               	retfie f
+  1094                           	opt stack 0
+  1095                           GLOBAL __end_of_TIMER0
+  1096  000682                     	__end_of_TIMER0:
+  1097                           	FNSIZE	_TIMER0,14,0
+  1098                           ; =============== function _TIMER0 ends ========
+                                 ====
+  1099                           
+  1100                           	signat	_TIMER0,88
+  1101                                   psect   text9,class=CODE,space=0,reloc=2
+  1102                           	global	intlevel2
+  1103                           
+  1104                           	opt lm
+  1105                           	FNBREAK _dividicifre,intlevel2
+  1106                           	global	_dividicifre
+  1107                           	global	??_dividicifre
+  1108                           	global	?_dividicifre
+  1109                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+  1110                           	line	130
+  1111  000000                     	__size_of_dividicifre	equ	__end_of_dividicifre-
+                                 _dividicifre
+  1112                           ;progetto.c: 130: void dividicifre(){
+  1113                           	
+  1114  000782                     _dividicifre:		; BSR set to: ?
+  1115                           
+  1116                           	opt stack 29
+  1117                           	line	131
+  1118                           ;progetto.c: 131: decine=tensione/100;
+  1119  000782  0E64               	movlw	low(064h)
+  1120  000784  0101               	movlb	1	; () banked
+  1121  000786  0101               	movlb	1	; () banked
+  1122  000788  6F1F               	movwf	(0+(?i2___awdiv+02h))&0ffh
+  1123  00078A  0E00               	movlw	high(064h)
+  1124  00078C  0101               	movlb	1	; () banked
+  1125  00078E  6F20               	movwf	(1+(?i2___awdiv+02h))&0ffh
+  1126  000790  0101               	movlb	1	; () banked
+  1127  000792  C005 F11D          	movff	(c:5),(?i2___awdiv)
+  1128  000796  0101               	movlb	1	; () banked
+  1129  000798  0101               	movlb	1	; () banked
+  1130  00079A  6B1E               	clrf	((?i2___awdiv+1))&0ffh
+  1131  00079C  EC1E  F002         	call	i2___awdiv	;wreg free
+  1132  0007A0  0101               	movlb	1	; () banked
+  1133  0007A2  0101               	movlb	1	; () banked
+  1134  0007A4  511D               	movf	(0+?i2___awdiv)&0ffh,w
+  1135  0007A6  6E06               	movwf	((c:6)),c
+  1136                           	line	132
+  1137                           ;progetto.c: 132: unita=(tensione-(decine*100))/
+                                 10;
+  1138  0007A8  0E0A               	movlw	low(0Ah)
+  1139  0007AA  0101               	movlb	1	; () banked
+  1140  0007AC  0101               	movlb	1	; () banked
+  1141  0007AE  6F1F               	movwf	(0+(?i2___awdiv+02h))&0ffh
+  1142  0007B0  0E00               	movlw	high(0Ah)
+  1143  0007B2  0101               	movlb	1	; () banked
+  1144  0007B4  6F20               	movwf	(1+(?i2___awdiv+02h))&0ffh
+  1145  0007B6  5006               	movf	((c:6)),c,w
+  1146  0007B8  0D64               	mullw	064h
+  1147  0007BA  50F3               	movf	(prodl),c,w
+  1148  0007BC  5C05               	subwf	((c:5)),c,w
+  1149  0007BE  0101               	movlb	1	; () banked
+  1150                           	
+  1151  0007C0  0101               	movlb	1	; () banked
+  1152  0007C2  6F1D               	movwf	((?i2___awdiv))&0ffh
+  1153  0007C4  50F4               	movf	(prodh),c,w
+  1154  0007C6  A0D8               	btfss	status,0
+  1155  0007C8  28F4               	incf	(prodh),c,w
+  1156  0007CA  0101               	movlb	1	; () banked
+  1157  0007CC  6B1E               	clrf	1+((?i2___awdiv))&0ffh
+  1158  0007CE  0101               	movlb	1	; () banked
+  1159  0007D0  5F1E               	subwf	1+((?i2___awdiv))&0ffh
+  1160  0007D2  EC1E  F002         	call	i2___awdiv	;wreg free
+  1161  0007D6  0101               	movlb	1	; () banked
+  1162  0007D8  0101               	movlb	1	; () banked
+  1163  0007DA  511D               	movf	(0+?i2___awdiv)&0ffh,w
+  1164  0007DC  6E04               	movwf	((c:4)),c
+  1165                           	line	133
+  1166                           ;progetto.c: 133: decimi=tensione-(decine*100)-(
+                                 unita*10);
+  1167  0007DE  5006               	movf	((c:6)),c,w
+  1168  0007E0  0D64               	mullw	064h
+  1169  0007E2  50F3               	movf	(prodl),c,w
+  1170  0007E4  5C05               	subwf	((c:5)),c,w
+  1171  0007E6  0101               	movlb	1	; () banked
+  1172  0007E8  6F1C               	movwf	(??_dividicifre+0+0)&0ffh
+  1173  0007EA  5004               	movf	((c:4)),c,w
+  1174  0007EC  0D0A               	mullw	0Ah
+  1175  0007EE  50F3               	movf	(prodl),c,w
+  1176  0007F0  0101               	movlb	1	; () banked
+  1177  0007F2  5D1C               	subwf	((??_dividicifre+0+0))&0ffh,w
+  1178  0007F4  6E0E               	movwf	((c:14)),c
+  1179                           	line	134
+  1180                           ;progetto.c: 134: }
+  1181  0007F6                     i2l138:
+  1182                           			; BSR set to: ?
+  1183                           
+  1184  0007F6  0012               	return
+  1185                           	opt stack 0
+  1186                           GLOBAL __end_of_dividicifre
+  1187  0007F8                     	__end_of_dividicifre:
+  1188                           	FNSIZE	_dividicifre,1,0
+  1189                           ; =============== function _dividicifre ends ===
+                                 =========
+  1190                           
+  1191                           	signat	_dividicifre,88
+  1192                                   psect   text10,class=CODE,space=0,reloc=
+                                 2
+  1193                           	global	intlevel2
+  1194                           
+  1195                           	opt lm
+  1196                           	FNBREAK _stampadecine,intlevel2
+  1197                           	global	_stampadecine
+  1198                           	global	??_stampadecine
+  1199                           	global	?_stampadecine
+  1200                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+  1201                           	line	137
+  1202  000000                     	__size_of_stampadecine	equ	__end_of_stampadecin
+                                 e-_stampadecine
+  1203                           ;progetto.c: 137: void stampadecine(){
+  1204                           	
+  1205  0008C6                     _stampadecine:		; BSR set to: ?
+  1206                           
+  1207                           	opt stack 29
+  1208                           	line	138
+  1209                           ;progetto.c: 138: LATC=cifra[decine];
+  1210  0008C6  0E01               	movlw	low((_cifra))
+  1211  0008C8  2406               	addwf	((c:6)),c,w
+  1212  0008CA  6EF6               	movwf	tblptrl
+  1213  0008CC  6AF7               	clrf	tblptrh
+  1214  0008CE  0E03               	movlw	high((_cifra))
+  1215  0008D0  22F7               	addwfc	tblptrh
+  1216  0008D2  0008               	tblrd	*
+  1217                           	
+  1218  0008D4  CFF5 FF8B          	movff	tablat,(c:3979)	;volatile
+  1219                           	line	139
+  1220                           ;progetto.c: 139: if(tensione<10)LATC= 0b1000111
+                                 0;
+  1221  0008D8  0E0A               	movlw	(0Ah)&0ffh
+  1222  0008DA  6005               	cpfslt	((c:5)),c
+  1223  0008DC  D001               	goto	i2u1091
+  1224  0008DE  D001               	goto	i2u1090
+  1225  0008E0                     i2u1091:
+  1226  0008E0  D002               	goto	i2l140
+  1227  0008E2                     i2u1090:
+  1228  0008E2  0E8E               	movlw	low(08Eh)
+  1229  0008E4  6E8B               	movwf	((c:3979)),c	;volatile
+  1230                           	
+  1231  0008E6                     i2l140:		; BSR set to: ?
+  1232                           
+  1233                           	line	141
+  1234                           ;progetto.c: 141: }
+  1235  0008E6                     i2l139:
+  1236                           			; BSR set to: ?
+  1237                           
+  1238  0008E6  0012               	return
+  1239                           	opt stack 0
+  1240                           GLOBAL __end_of_stampadecine
+  1241  0008E8                     	__end_of_stampadecine:
+  1242                           	FNSIZE	_stampadecine,0,0
+  1243                           ; =============== function _stampadecine ends ==
+                                 ==========
+  1244                           
+  1245                           	signat	_stampadecine,88
+  1246                                   psect   text11,class=CODE,space=0,reloc=
+                                 2
+  1247                           	global	intlevel2
+  1248                           
+  1249                           	opt lm
+  1250                           	FNBREAK _stampaunita,intlevel2
+  1251                           	global	_stampaunita
+  1252                           	global	??_stampaunita
+  1253                           	global	?_stampaunita
+  1254                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+  1255                           	line	144
+  1256  000000                     	__size_of_stampaunita	equ	__end_of_stampaunita-
+                                 _stampaunita
+  1257                           ;progetto.c: 144: void stampaunita(){
+  1258                           	
+  1259  0008A2                     _stampaunita:		; BSR set to: ?
+  1260                           
+  1261                           	opt stack 29
+  1262                           	line	145
+  1263                           ;progetto.c: 145: LATC=(cifra[unita]|0b00000001)
+                                 ;
+  1264  0008A2  0E01               	movlw	low((_cifra))
+  1265  0008A4  2404               	addwf	((c:4)),c,w
+  1266  0008A6  6EF6               	movwf	tblptrl
+  1267  0008A8  6AF7               	clrf	tblptrh
+  1268  0008AA  0E03               	movlw	high((_cifra))
+  1269  0008AC  22F7               	addwfc	tblptrh
+  1270  0008AE  0008               	tblrd	*
+  1271                           	
+  1272  0008B0  50F5               	movf	tablat,w
+  1273                           
+  1274  0008B2  0901               	iorlw	low(01h)
+  1275  0008B4  6E8B               	movwf	((c:3979)),c	;volatile
+  1276                           	line	146
+  1277                           ;progetto.c: 146: if(tensione<10)LATC= 0b1000111
+                                 0;
+  1278  0008B6  0E0A               	movlw	(0Ah)&0ffh
+  1279  0008B8  6005               	cpfslt	((c:5)),c
+  1280  0008BA  D001               	goto	i2u1101
+  1281  0008BC  D001               	goto	i2u1100
+  1282  0008BE                     i2u1101:
+  1283  0008BE  D002               	goto	i2l142
+  1284  0008C0                     i2u1100:
+  1285  0008C0  0E8E               	movlw	low(08Eh)
+  1286  0008C2  6E8B               	movwf	((c:3979)),c	;volatile
+  1287                           	
+  1288  0008C4                     i2l142:		; BSR set to: ?
+  1289                           
+  1290                           	line	147
+  1291                           ;progetto.c: 147: }
+  1292  0008C4                     i2l141:
+  1293                           			; BSR set to: ?
+  1294                           
+  1295  0008C4  0012               	return
+  1296                           	opt stack 0
+  1297                           GLOBAL __end_of_stampaunita
+  1298  0008C6                     	__end_of_stampaunita:
+  1299                           	FNSIZE	_stampaunita,0,0
+  1300                           ; =============== function _stampaunita ends ===
+                                 =========
+  1301                           
+  1302                           	signat	_stampaunita,88
+  1303                                   psect   text12,class=CODE,space=0,reloc=
+                                 2
+  1304                           	global	intlevel2
+  1305                           
+  1306                           	opt lm
+  1307                           	FNBREAK _restartTIMER0,intlevel2
+  1308                           	global	_restartTIMER0
+  1309                           	global	??_restartTIMER0
+  1310                           	global	?_restartTIMER0
+  1311                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+  1312                           	line	39
+  1313  000000                     	__size_of_restartTIMER0	equ	__end_of_restartTIM
+                                 ER0-_restartTIMER0
+  1314                           ;CONFIG2420.c: 39: void restartTIMER0(void){
+  1315                           	
+  1316  000870                     _restartTIMER0:		; BSR set to: ?
+  1317                           
+  1318                           	opt stack 29
+  1319                           	line	41
+  1320  000870  C00B F11C          	movff	(c:11),??_restartTIMER0+0+0
+  1321  000874  C00C F11D          	movff	(c:11+1),??_restartTIMER0+0+0+1
+  1322  000878  0E05               	movlw	05h
+  1323  00087A  0101               	movlb	1	; () banked
+  1324  00087C  6F1E               	movwf	(??_restartTIMER0+2+0)&0ffh
+  1325  00087E                     i2u1115:
+  1326  00087E  90D8               	bcf	status,0
+  1327  000880  0101               	movlb	1	; () banked
+  1328  000882  331D               	rrcf	(??_restartTIMER0+0+1)&0ffh
+  1329  000884  331C               	rrcf	(??_restartTIMER0+0+0)&0ffh
+  1330  000886  0101               	movlb	1	; () banked
+  1331  000888  2F1E               	decfsz	(??_restartTIMER0+2+0)&0ffh
+  1332  00088A  D7F9               	goto	i2u1115
+  1333  00088C  0101               	movlb	1	; () banked
+  1334  00088E  1F1C               	comf	(??_restartTIMER0+0+0)&0ffh
+  1335  000890  1F1D               	comf	(??_restartTIMER0+0+1)&0ffh
+  1336  000892  4B1C               	infsnz	(??_restartTIMER0+0+0)&0ffh
+  1337  000894  2B1D               	incf	(??_restartTIMER0+0+1)&0ffh
+  1338  000896  C11C  FFD6         	movff	??_restartTIMER0+0+0,(c:4054)	;volatile
+  1339  00089A  C11D  FFD7         	movff	??_restartTIMER0+0+1,(c:4054+1)	;volatile
+  1340                           	line	42
+  1341                           ;CONFIG2420.c: 42: TMR0IF=0;
+  1342  00089E  94F2               	bcf	c:(32658/8),(32658)&7	;volatile
+  1343                           	line	43
+  1344                           ;CONFIG2420.c: 43: }
+  1345  0008A0                     i2l110:
+  1346                           			; BSR set to: ?
+  1347                           
+  1348  0008A0  0012               	return
+  1349                           	opt stack 0
+  1350                           GLOBAL __end_of_restartTIMER0
+  1351  0008A2                     	__end_of_restartTIMER0:
+  1352                           	FNSIZE	_restartTIMER0,3,0
+  1353                           ; =============== function _restartTIMER0 ends =
+                                 ===========
+  1354                           
+  1355                           	signat	_restartTIMER0,88
+  1356                                   psect   text13,class=CODE,space=0,reloc=
+                                 2
+  1357                           	global	intlevel2
+  1358                           
+  1359                           	opt lm
+  1360                           	FNBREAK _readADCH0,intlevel2
+  1361                           	global	_readADCH0
+  1362                           	global	??_readADCH0
+  1363                           	global	?_readADCH0
+  1364                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\CONFIG2420.c"
+  1365                           	line	29
+  1366  000000                     	__size_of_readADCH0	equ	__end_of_readADCH0-_rea
+                                 dADCH0
+  1367                           ;CONFIG2420.c: 29: unsigned char readADCH0(void)
+                                 {
+  1368                           	
+  1369  00090A                     _readADCH0:		; BSR set to: ?
+  1370                           
+  1371                           	opt stack 29
+  1372                           	line	32
+  1373                           ;CONFIG2420.c: 30: unsigned char datoAD;
+  1374                           ;CONFIG2420.c: 32: ADCON0=0b00000011;
+  1375  00090A  0E03               	movlw	low(03h)
+  1376  00090C  6EC2               	movwf	((c:4034)),c	;volatile
+  1377                           	line	33
+  1378                           ;CONFIG2420.c: 33: while (GODONE)continue;
+  1379  00090E  D001               	goto	i2l107
+  1380                           	
+  1381  000910                     i2l108:		; BSR set to: ?
+  1382                           
+  1383  000910  D000               	goto	i2l107
+  1384                           	
+  1385  000912                     i2l107:		; BSR set to: ?
+  1386                           
+  1387  000912  B2C2               	btfsc	c:(32273/8),(32273)&7	;volatile
+  1388  000914  D001               	goto	i2u1121
+  1389  000916  D001               	goto	i2u1120
+  1390  000918                     i2u1121:
+  1391  000918  D7FB               	goto	i2l108
+  1392  00091A                     i2u1120:
+  1393                           	
+  1394  00091A                     i2l109:		; BSR set to: ?
+  1395                           
+  1396                           	line	34
+  1397                           ;CONFIG2420.c: 34: ADIF=0;
+  1398  00091A  9C9E               	bcf	c:(31990/8),(31990)&7	;volatile
+  1399                           	line	35
+  1400                           ;CONFIG2420.c: 35: datoAD=ADRESH;
+  1401  00091C  CFC4 F11C          	movff	(c:4036),(readADCH0@datoAD)	;volatile
+  1402                           	line	36
+  1403                           ;CONFIG2420.c: 36: return datoAD;
+  1404  000920  0101               	movlb	1	; () banked
+  1405  000922  0101               	movlb	1	; () banked
+  1406  000924  511C               	movf	((readADCH0@datoAD))&0ffh,w
+  1407  000926  D000               	goto	i2l106
+  1408                           	line	37
+  1409                           ;CONFIG2420.c: 37: }
+  1410  000928                     i2l106:
+  1411                           			; BSR set to: ?
+  1412                           
+  1413  000928  0012               	return
+  1414                           	opt stack 0
+  1415                           GLOBAL __end_of_readADCH0
+  1416  00092A                     	__end_of_readADCH0:
+  1417                           	FNSIZE	_readADCH0,1,0
+  1418                           ; =============== function _readADCH0 ends =====
+                                 =======
+  1419                           
+  1420                           	signat	_readADCH0,89
+  1421                                   psect   text14,class=CODE,space=0,reloc=
+                                 2
+  1422                           	global	intlevel2
+  1423                           
+  1424                           	opt lm
+  1425                           	FNBREAK _stampadecimi,intlevel2
+  1426                           	global	_stampadecimi
+  1427                           	global	??_stampadecimi
+  1428                           	global	?_stampadecimi
+  1429                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+  1430                           	line	150
+  1431  000000                     	__size_of_stampadecimi	equ	__end_of_stampadecim
+                                 i-_stampadecimi
+  1432                           ;progetto.c: 150: void stampadecimi(){
+  1433                           	
+  1434  0008E8                     _stampadecimi:		; BSR set to: ?
+  1435                           
+  1436                           	opt stack 29
+  1437                           	line	151
+  1438                           ;progetto.c: 151: LATC=cifra[decimi];
+  1439  0008E8  0E01               	movlw	low((_cifra))
+  1440  0008EA  240E               	addwf	((c:14)),c,w
+  1441  0008EC  6EF6               	movwf	tblptrl
+  1442  0008EE  6AF7               	clrf	tblptrh
+  1443  0008F0  0E03               	movlw	high((_cifra))
+  1444  0008F2  22F7               	addwfc	tblptrh
+  1445  0008F4  0008               	tblrd	*
+  1446                           	
+  1447  0008F6  CFF5 FF8B          	movff	tablat,(c:3979)	;volatile
+  1448                           	line	152
+  1449                           ;progetto.c: 152: if(tensione<10)LATC= 0b1000111
+                                 0;
+  1450  0008FA  0E0A               	movlw	(0Ah)&0ffh
+  1451  0008FC  6005               	cpfslt	((c:5)),c
+  1452  0008FE  D001               	goto	i2u1131
+  1453  000900  D001               	goto	i2u1130
+  1454  000902                     i2u1131:
+  1455  000902  D002               	goto	i2l144
+  1456  000904                     i2u1130:
+  1457  000904  0E8E               	movlw	low(08Eh)
+  1458  000906  6E8B               	movwf	((c:3979)),c	;volatile
+  1459                           	
+  1460  000908                     i2l144:		; BSR set to: ?
+  1461                           
+  1462                           	line	153
+  1463                           ;progetto.c: 153: }
+  1464  000908                     i2l143:
+  1465                           			; BSR set to: ?
+  1466                           
+  1467  000908  0012               	return
+  1468                           	opt stack 0
+  1469                           GLOBAL __end_of_stampadecimi
+  1470  00090A                     	__end_of_stampadecimi:
+  1471                           	FNSIZE	_stampadecimi,0,0
+  1472                           ; =============== function _stampadecimi ends ==
+                                 ==========
+  1473                           
+  1474                           	signat	_stampadecimi,88
+  1475                                   psect   text15,class=CODE,space=0,reloc=
+                                 2
+  1476                           	global	intlevel2
+  1477                           
+  1478                           	opt lm
+  1479                           	FNBREAK i2___awdiv,intlevel2
+  1480                           	global	i2___awdiv
+  1481                           	global	i2___awdiv
+  1482                           	global	??i2___awdiv
+  1483                           	global	?i2___awdiv
+  1484                           	file	"C:\Program Files (x86)\HI-TECH Software\P
+                                 ICC-18\PRO\9.63\sources\awdiv.c"
+  1485                           	line	5
+  1486  000000                     	__size_ofi2___awdiv	equ	__end_ofi2___awdiv-i2__
+                                 _awdiv
+  1487                           	
+  1488  00043C                     i2___awdiv:		; BSR set to: ?
+  1489                           
+  1490                           	opt stack 28
+  1491                           	line	9
+  1492  00043C  0101               	movlb	1	; () banked
+  1493  00043E  6F25               	movwf	(??i2___awdiv+4+0)&0ffh
+  1494  000440  0E00               	movlw	low(0)
+  1495  000442  0101               	movlb	1	; () banked
+  1496  000444  0101               	movlb	1	; () banked
+  1497  000446  6F22               	movwf	((i2___awdiv@sign))&0ffh
+  1498  000448  0101               	movlb	1	; () banked
+  1499  00044A  5125               	movf	(??i2___awdiv+4+0)&0ffh,w
+  1500                           	line	10
+  1501  00044C  0101               	movlb	1	; () banked
+  1502  00044E  0101               	movlb	1	; () banked
+  1503  000450  AF20               	btfss	((i2___awdiv@divisor+1))&0ffh,7
+  1504  000452  D001               	goto	i2u1141
+  1505  000454  D001               	goto	i2u1140
+  1506  000456                     i2u1141:
+  1507  000456  D00F               	goto	i2l205
+  1508  000458                     i2u1140:
+  1509                           	line	11
+  1510  000458  0101               	movlb	1	; () banked
+  1511  00045A  0101               	movlb	1	; () banked
+  1512  00045C  6D1F               	negf	((i2___awdiv@divisor))&0ffh
+  1513  00045E  0101               	movlb	1	; () banked
+  1514  000460  1F20               	comf	((i2___awdiv@divisor+1))&0ffh
+  1515  000462  B0D8               	btfsc	status,0
+  1516  000464  2B20               	incf	((i2___awdiv@divisor+1))&0ffh
+  1517                           	line	12
+  1518  000466  0101               	movlb	1	; () banked
+  1519  000468  6F25               	movwf	(??i2___awdiv+4+0)&0ffh
+  1520  00046A  0E01               	movlw	low(01h)
+  1521  00046C  0101               	movlb	1	; () banked
+  1522  00046E  0101               	movlb	1	; () banked
+  1523  000470  6F22               	movwf	((i2___awdiv@sign))&0ffh
+  1524  000472  0101               	movlb	1	; () banked
+  1525  000474  5125               	movf	(??i2___awdiv+4+0)&0ffh,w
+  1526                           	line	13
+  1527                           	
+  1528  000476                     i2l205:		; BSR set to: ?
+  1529                           
+  1530                           	line	14
+  1531  000476  0101               	movlb	1	; () banked
+  1532  000478  0101               	movlb	1	; () banked
+  1533  00047A  AF1E               	btfss	((i2___awdiv@dividend+1))&0ffh,7
+  1534  00047C  D001               	goto	i2u1151
+  1535  00047E  D001               	goto	i2u1150
+  1536  000480                     i2u1151:
+  1537  000480  D00B               	goto	i2l206
+  1538  000482                     i2u1150:
+  1539                           	line	15
+  1540  000482  0101               	movlb	1	; () banked
+  1541  000484  0101               	movlb	1	; () banked
+  1542  000486  6D1D               	negf	((i2___awdiv@dividend))&0ffh
+  1543  000488  0101               	movlb	1	; () banked
+  1544  00048A  1F1E               	comf	((i2___awdiv@dividend+1))&0ffh
+  1545  00048C  B0D8               	btfsc	status,0
+  1546  00048E  2B1E               	incf	((i2___awdiv@dividend+1))&0ffh
+  1547                           	line	16
+  1548  000490  0E01               	movlw	(01h)&0ffh
+  1549  000492  0101               	movlb	1	; () banked
+  1550  000494  0101               	movlb	1	; () banked
+  1551  000496  1B22               	xorwf	((i2___awdiv@sign))&0ffh
+  1552                           	line	17
+  1553                           	
+  1554  000498                     i2l206:		; BSR set to: ?
+  1555                           
+  1556                           	line	18
+  1557  000498  0E00               	movlw	low(0)
+  1558  00049A  0101               	movlb	1	; () banked
+  1559  00049C  0101               	movlb	1	; () banked
+  1560  00049E  6F23               	movwf	((i2___awdiv@quotient))&0ffh
+  1561  0004A0  0E00               	movlw	high(0)
+  1562  0004A2  0101               	movlb	1	; () banked
+  1563  0004A4  6F24               	movwf	((i2___awdiv@quotient+1))&0ffh
+  1564                           	line	19
+  1565  0004A6  0101               	movlb	1	; () banked
+  1566  0004A8  0101               	movlb	1	; () banked
+  1567  0004AA  5120               	movf	((i2___awdiv@divisor+1))&0ffh,w
+  1568  0004AC  111F               	iorwf ((i2___awdiv@divisor))&0ffh,w
+  1569                           
+  1570  0004AE  B4D8               	btfsc	status,2
+  1571  0004B0  D001               	goto	i2u1161
+  1572  0004B2  D001               	goto	i2u1160
+  1573  0004B4                     i2u1161:
+  1574  0004B4  D047               	goto	i2l207
+  1575  0004B6                     i2u1160:
+  1576                           	line	20
+  1577  0004B6  0101               	movlb	1	; () banked
+  1578  0004B8  6F25               	movwf	(??i2___awdiv+4+0)&0ffh
+  1579  0004BA  0E01               	movlw	low(01h)
+  1580  0004BC  0101               	movlb	1	; () banked
+  1581  0004BE  0101               	movlb	1	; () banked
+  1582  0004C0  6F21               	movwf	((i2___awdiv@counter))&0ffh
+  1583  0004C2  0101               	movlb	1	; () banked
+  1584  0004C4  5125               	movf	(??i2___awdiv+4+0)&0ffh,w
+  1585                           	line	21
+  1586  0004C6  D009               	goto	i2l208
+  1587                           	
+  1588  0004C8                     i2l209:		; BSR set to: ?
+  1589                           
+  1590                           	line	22
+  1591  0004C8  0101               	movlb	1	; () banked
+  1592  0004CA  90D8               	bcf	status,0
+  1593  0004CC  0101               	movlb	1	; () banked
+  1594  0004CE  371F               	rlcf	((i2___awdiv@divisor))&0ffh
+  1595  0004D0  0101               	movlb	1	; () banked
+  1596  0004D2  3720               	rlcf	((i2___awdiv@divisor+1))&0ffh
+  1597                           	line	23
+  1598  0004D4  0101               	movlb	1	; () banked
+  1599  0004D6  0101               	movlb	1	; () banked
+  1600  0004D8  2B21               	incf	((i2___awdiv@counter))&0ffh
+  1601                           	line	24
+  1602                           	
+  1603  0004DA                     i2l208:		; BSR set to: ?
+  1604                           
+  1605                           	line	21
+  1606  0004DA  0101               	movlb	1	; () banked
+  1607                           	
+  1608  0004DC  0101               	movlb	1	; () banked
+  1609  0004DE  AF20               	btfss	((i2___awdiv@divisor+1))&0ffh,(15)&7
+  1610  0004E0  D001               	goto	i2u1171
+  1611  0004E2  D001               	goto	i2u1170
+  1612  0004E4                     i2u1171:
+  1613  0004E4  D7F1               	goto	i2l209
+  1614  0004E6                     i2u1170:
+  1615                           	
+  1616  0004E6                     i2l210:		; BSR set to: ?
+  1617                           
+  1618                           	line	25
+  1619                           	
+  1620  0004E6                     i2l213:		; BSR set to: ?
+  1621                           
+  1622                           	line	26
+  1623  0004E6  0101               	movlb	1	; () banked
+  1624  0004E8  90D8               	bcf	status,0
+  1625  0004EA  0101               	movlb	1	; () banked
+  1626  0004EC  3723               	rlcf	((i2___awdiv@quotient))&0ffh
+  1627  0004EE  0101               	movlb	1	; () banked
+  1628  0004F0  3724               	rlcf	((i2___awdiv@quotient+1))&0ffh
+  1629                           	line	27
+  1630  0004F2  0101               	movlb	1	; () banked
+  1631  0004F4  0101               	movlb	1	; () banked
+  1632  0004F6  511F               	movf	((i2___awdiv@divisor))&0ffh,w
+  1633  0004F8  0101               	movlb	1	; () banked
+  1634  0004FA  0101               	movlb	1	; () banked
+  1635  0004FC  5D1D               	subwf	((i2___awdiv@dividend))&0ffh,w
+  1636  0004FE  0101               	movlb	1	; () banked
+  1637  000500  0101               	movlb	1	; () banked
+  1638  000502  5120               	movf	((i2___awdiv@divisor+1))&0ffh,w
+  1639  000504  0101               	movlb	1	; () banked
+  1640  000506  0101               	movlb	1	; () banked
+  1641  000508  591E               	subwfb	((i2___awdiv@dividend+1))&0ffh,w
+  1642  00050A  A0D8               	btfss	status,0
+  1643  00050C  D001               	goto	i2u1181
+  1644  00050E  D001               	goto	i2u1180
+  1645  000510                     i2u1181:
+  1646  000510  D00F               	goto	i2l214
+  1647  000512                     i2u1180:
+  1648                           	line	28
+  1649  000512  0101               	movlb	1	; () banked
+  1650  000514  0101               	movlb	1	; () banked
+  1651  000516  511F               	movf	((i2___awdiv@divisor))&0ffh,w
+  1652  000518  0101               	movlb	1	; () banked
+  1653  00051A  0101               	movlb	1	; () banked
+  1654  00051C  5F1D               	subwf	((i2___awdiv@dividend))&0ffh
+  1655  00051E  0101               	movlb	1	; () banked
+  1656  000520  0101               	movlb	1	; () banked
+  1657  000522  5120               	movf	((i2___awdiv@divisor+1))&0ffh,w
+  1658  000524  0101               	movlb	1	; () banked
+  1659  000526  0101               	movlb	1	; () banked
+  1660  000528  5B1E               	subwfb	((i2___awdiv@dividend+1))&0ffh
+  1661                           
+  1662                           	line	29
+  1663  00052A  0101               	movlb	1	; () banked
+  1664  00052C  0101               	movlb	1	; () banked
+  1665  00052E  8123               	bsf	(0+(0/8)+(i2___awdiv@quotient))&0ffh,(0)&7
+  1666                           	line	30
+  1667                           	
+  1668  000530                     i2l214:		; BSR set to: ?
+  1669                           
+  1670                           	line	31
+  1671  000530  0101               	movlb	1	; () banked
+  1672  000532  90D8               	bcf	status,0
+  1673  000534  0101               	movlb	1	; () banked
+  1674  000536  3320               	rrcf	((i2___awdiv@divisor+1))&0ffh
+  1675  000538  0101               	movlb	1	; () banked
+  1676  00053A  331F               	rrcf	((i2___awdiv@divisor))&0ffh
+  1677                           	line	32
+  1678  00053C  0101               	movlb	1	; () banked
+  1679  00053E  0101               	movlb	1	; () banked
+  1680  000540  2F21               	decfsz	((i2___awdiv@counter))&0ffh
+  1681                           	
+  1682  000542  D7D1               	goto	i2l213
+  1683                           	
+  1684  000544                     i2l212:		; BSR set to: ?
+  1685                           
+  1686                           	line	33
+  1687                           	
+  1688  000544                     i2l207:		; BSR set to: ?
+  1689                           
+  1690                           	line	34
+  1691  000544  0101               	movlb	1	; () banked
+  1692  000546  0101               	movlb	1	; () banked
+  1693  000548  5122               	movf	((i2___awdiv@sign))&0ffh,w
+  1694  00054A  B4D8               	btfsc	status,2
+  1695  00054C  D001               	goto	i2u1191
+  1696  00054E  D001               	goto	i2u1190
+  1697  000550                     i2u1191:
+  1698  000550  D007               	goto	i2l215
+  1699  000552                     i2u1190:
+  1700                           	line	35
+  1701  000552  0101               	movlb	1	; () banked
+  1702  000554  0101               	movlb	1	; () banked
+  1703  000556  6D23               	negf	((i2___awdiv@quotient))&0ffh
+  1704  000558  0101               	movlb	1	; () banked
+  1705  00055A  1F24               	comf	((i2___awdiv@quotient+1))&0ffh
+  1706  00055C  B0D8               	btfsc	status,0
+  1707  00055E  2B24               	incf	((i2___awdiv@quotient+1))&0ffh
+  1708                           	
+  1709  000560                     i2l215:		; BSR set to: ?
+  1710                           
+  1711                           	line	36
+  1712  000560  C123  F11D         	movff	(i2___awdiv@quotient),(?i2___awdiv)
+  1713  000564  C124  F11E         	movff	(i2___awdiv@quotient+1),(?i2___awdiv+1)
+  1714  000568  D000               	goto	i2l204
+  1715                           	line	37
+  1716  00056A                     i2l204:
+  1717                           			; BSR set to: ?
+  1718                           
+  1719  00056A  0012               	return
+  1720                           	opt stack 0
+  1721                           GLOBAL __end_ofi2___awdiv
+  1722  00056C                     	__end_ofi2___awdiv:
+  1723                           	FNSIZE	i2___awdiv,5,4
+  1724                           ; =============== function i2___awdiv ends =====
+                                 =======
+  1725                           
+  1726                           	signat	i2___awdiv,8314
+  1727                           	FNCALL	_main,_configPIC
+  1728                           	FNCALL	_main,_setAD
+  1729                           	FNCALL	_main,_setTIMER0CKINT
+  1730                           	FNCALL	_main,_enintGLOB
+  1731                           	FNCALL	_main,_enintTIMER0
+  1732                           	FNCALL	_main,_onTIMER0
+  1733                           	FNCALL	_setTIMER0CKINT,___awdiv
+  1734                           	FNROOT	_main
+  1735                           	FNCALL	_TIMER0,_restartTIMER0
+  1736                           	FNCALL	_TIMER0,_readADCH0
+  1737                           	FNCALL	_TIMER0,i2___awdiv
+  1738                           	FNCALL	_TIMER0,_dividicifre
+  1739                           	FNCALL	_TIMER0,_stampadecine
+  1740                           	FNCALL	_TIMER0,_stampaunita
+  1741                           	FNCALL	_TIMER0,_stampadecimi
+  1742                           	FNCALL	_dividicifre,i2___awdiv
+  1743                           	FNCALL	intlevel2,_TIMER0
+  1744                           	global	intlevel2
+  1745                           	FNROOT	intlevel2
+  1746                                   psect   smallconst,class=SMALLCONST,spac
+                                 e=0,reloc=2
+  1747  000300  00                 	db	0	;reserve
+  1748                           	global	_cifra
+  1749                           	file	"C:\Users\Consonni.09099\Desktop\Voltmetro
+                                 _18F2580_18F2420\progetto.c"
+  1750                           	line	44
+  1751  000301                     _cifra:
+  1752  000301  7E                 	db	low(07Eh)
+  1753  000302  18                 	db	low(018h)
+  1754  000303  B6                 	db	low(0B6h)
+  1755  000304  BC                 	db	low(0BCh)
+  1756  000305  D8                 	db	low(0D8h)
+  1757  000306  EC                 	db	low(0ECh)
+  1758  000307  EE                 	db	low(0EEh)
+  1759  000308  38                 	db	low(038h)
+  1760  000309  FE                 	db	low(0FEh)
+  1761  00030A  FC                 	db	low(0FCh)
+  1762                           	global	_cifra
+  1763                           	global	_restart
+  1764                           	global	_restart
+  1765  000000                     _restart  equ     11
+  1766                           
+  1767                           	DABS	1,11,2	;_restart
+  1768                           	global	_usec
+  1769                           	global	_usec
+  1770  000000                     _usec  equ     9
+  1771                           
+  1772                           	DABS	1,9,2	;_usec
+  1773                           	global	_var
+  1774                           	global	_var
+  1775  000000                     _var  equ     7
+  1776                           
+  1777                           	DABS	1,7,2	;_var
+  1778                           	global	_CapStatus
+  1779                           	global	_CapStatus
+  1780  000000                     _CapStatus  equ     15
+  1781                           
+  1782                           	DABS	1,15,1	;_CapStatus
+  1783                           	global	_decimi
+  1784                           	global	_decimi
+  1785  000000                     _decimi  equ     14
+  1786                           
+  1787                           	DABS	1,14,1	;_decimi
+  1788                           	global	_decimi7seg
+  1789                           	global	_decimi7seg
+  1790  000000                     _decimi7seg  equ     13
+  1791                           
+  1792                           	DABS	1,13,1	;_decimi7seg
+  1793                           	global	_decine
+  1794                           	global	_decine
+  1795  000000                     _decine  equ     6
+  1796                           
+  1797                           	DABS	1,6,1	;_decine
+  1798                           	global	_decine7seg
+  1799                           	global	_decine7seg
+  1800  000000                     _decine7seg  equ     2
+  1801                           
+  1802                           	DABS	1,2,1	;_decine7seg
+  1803                           	global	_i
+  1804                           	global	_i
+  1805  000000                     _i  equ     1
+  1806                           
+  1807                           	DABS	1,1,1	;_i
+  1808                           	global	_stato
+  1809                           	global	_stato
+  1810  000000                     _stato  equ     0
+  1811                           
+  1812                           	DABS	1,0,1	;_stato
+  1813                           	global	_tensione
+  1814                           	global	_tensione
+  1815  000000                     _tensione  equ     5
+  1816                           
+  1817                           	DABS	1,5,1	;_tensione
+  1818                           	global	_unita
+  1819                           	global	_unita
+  1820  000000                     _unita  equ     4
+  1821                           
+  1822                           	DABS	1,4,1	;_unita
+  1823                           	global	_unita7seg
+  1824                           	global	_unita7seg
+  1825  000000                     _unita7seg  equ     3
+  1826                           
+  1827                           	DABS	1,3,1	;_unita7seg
+  1828                           	global	_TMR0
+  1829  000000                     _TMR0	equ	0xFD6
+  1830                           	global	_ADCON0
+  1831  000000                     _ADCON0	equ	0xFC2
+  1832                           	global	_ADCON1
+  1833  000000                     _ADCON1	equ	0xFC1
+  1834                           	global	_ADCON2
+  1835  000000                     _ADCON2	equ	0xFC0
+  1836                           	global	_ADRESH
+  1837  000000                     _ADRESH	equ	0xFC4
+  1838                           	global	_INTCON
+  1839  000000                     _INTCON	equ	0xFF2
+  1840                           	global	_LATB
+  1841  000000                     _LATB	equ	0xF8A
+  1842                           	global	_LATC
+  1843  000000                     _LATC	equ	0xF8B
+  1844                           	global	_OSCCON
+  1845  000000                     _OSCCON	equ	0xFD3
+  1846                           	global	_T0CON
+  1847  000000                     _T0CON	equ	0xFD5
+  1848                           	global	_TRISB
+  1849  000000                     _TRISB	equ	0xF93
+  1850                           	global	_TRISC
+  1851  000000                     _TRISC	equ	0xF94
+  1852                           	global	_ADIF
+  1853  000000                     _ADIF	equ	0x7CF6
+  1854                           	global	_GIE
+  1855  000000                     _GIE	equ	0x7F97
+  1856                           	global	_GODONE
+  1857  000000                     _GODONE	equ	0x7E11
+  1858                           	global	_LATB0
+  1859  000000                     _LATB0	equ	0x7C50
+  1860                           	global	_LATB1
+  1861  000000                     _LATB1	equ	0x7C51
+  1862                           	global	_LATB2
+  1863  000000                     _LATB2	equ	0x7C52
+  1864                           	global	_TMR0IE
+  1865  000000                     _TMR0IE	equ	0x7F95
+  1866                           	global	_TMR0IF
+  1867  000000                     _TMR0IF	equ	0x7F92
+  1868                           	global	_TMR0ON
+  1869  000000                     _TMR0ON	equ	0x7EAF
+  1870  00030B  00                 	db 0	; dummy byte at the end
+  1871                           	psect	intsave_regs,class=BIGRAM,space=1
+  1872                           	PSECT	param1,class=BANK1,space=1
+  1873                           	GLOBAL	__Lparam1
+  1874                           	FNCONF	param1,??,?
+  1875                           	GLOBAL	__Labsbss0
+  1876  000000                     __Labsbss0	EQU	0
+  1877                           	GLOBAL	__Habsbss0
+  1878  000000                     __Habsbss0	EQU	16
+  1879                           GLOBAL	__Lparam, __Hparam
+  1880                           GLOBAL	__Lparam1, __Hparam1
+  1881  000000                     __Lparam	EQU	__Lparam1
+  1882  000000                     __Hparam	EQU	__Hparam1
+
+
+HI-TECH Software PICC-18 Macro Assembler V9.63PL3 build 4692 
+Symbol Table                                           Fri Nov 06 10:32:59 2015
+
+           ?_enintTIMER0 0102                        _i 000001  
+           ___awdiv@sign 010A              _stampaunita 08A2  
+           _stampadecine 08C6             _stampadecimi 08E8  
+                    l111 086E                      l112 0702  
+                    l120 06DC                      l105 0834  
+                    l113 06A4                      l121 0936  
+                    l210 03B6                      l114 06B0  
+                    l122 092E                      l115 0702  
+                    l123 0932                      l204 043A  
+                    l212 0414                      l116 06EA  
+                    l213 03B6                      l205 0346  
+                    l117 06B2                      l125 077C  
+                    l214 0400                      l206 0368  
+                    l118 06C0                      l126 0776  
+                    l215 0430                      l207 0414  
+                    l119 06CE                      l208 03AA  
+                    l209 0398                      _GIE 007F97  
+                    u170 0696                      u171 0694  
+                    _var 000007       setTIMER0CKINT@usec 0102  
+                   _ADIF 007CF6                     u1140 0328  
+                   u1141 0326                     u1150 0352  
+                   u1151 0350                     u1160 0386  
+                   u1161 0384                     u1170 03B6  
+                   u1171 03B4                     u1180 03E2  
+                   u1181 03E0                     _LATB 000F8A  
+                   u1190 0422                     _LATC 000F8B  
+                   u1191 0420                     _TMR0 000FD6  
+                   _main 0704                     fsr0h 000FEA  
+                   fsr1h 000FE2                     fsr0l 000FE9  
+                   fsr2h 000FDA                     fsr1l 000FE1  
+                   fsr2l 000FD9                     _usec 000009  
+                   pclat 000FFA                     prodh 000FF4  
+                   prodl 000FF3                     start 0018  
+                  ?_main 0100          __end_of___awdiv 043C  
+                  _T0CON 000FD5          ___awdiv@divisor 0107  
+                  _LATB0 007C50                    _LATB1 007C51  
+                  _LATB2 007C52                    i2l110 08A0  
+                  i2l210 04E6                    i2l106 0928  
+                  i2l130 061E                    i2l107 0912  
+                  i2l131 059C                    i2l204 056A  
+                  i2l212 0544                    i2l108 0910  
+                  i2l140 08E6                    i2l132 0600  
+                  i2l213 04E6                    i2l205 0476  
+                  i2l109 091A                    i2l141 08C4  
+                  i2l133 0602                    i2l214 0530  
+                  i2l206 0498                    i2l142 08C4  
+                  i2l134 060A                    i2l215 0560  
+                  i2l207 0544                    i2l143 0908  
+                  i2l135 0614                    i2l208 04DA  
+                  i2l144 0908                    i2l128 064C  
+                  i2l136 0640                    i2l209 04C8  
+                  i2l137 064C                    i2l129 0632  
+                  i2l138 07F6                    i2l139 08E6  
+        ___awdiv@counter 0109                    _TRISB 000F93  
+                  _TRISC 000F94                    _cifra 0301  
+                  _setAD 0682         ??_setTIMER0CKINT 0104  
+                  _stato 000000                    _unita 000004  
+                  tablat 000FF5                    status 000FD8  
+           __end_of_main 0782                   ??_main 0100  
+          __activetblptr 000002                   _ADCON0 000FC2  
+                 _ADCON1 000FC1                   _ADCON2 000FC0  
+                 ?_setAD 0102                   _ADRESH 000FC4  
+       ___awdiv@dividend 0105                   _GODONE 007E11  
+                 _INTCON 000FF2                   i2u1100 08C0  
+                 i2u1101 08BE                   i2u1120 091A  
+                 i2u1121 0918                   i2u1130 0904  
+                 i2u1131 0902                   i2u1115 087E  
+                 i2u1140 0458                   i2u1141 0456  
+                 i2u1150 0482                   i2u1070 05C6  
+                 i2u1151 0480                   i2u1071 05C4  
+                 i2u1160 04B6                   i2u1080 063C  
+                 i2u1161 04B4                   i2u1081 063A  
+                 i2u1170 04E6                   i2u1090 08E2  
+                 i2u1171 04E4                   i2u1091 08E0  
+                 i2u1180 0512                   i2u1181 0510  
+                 i2u1190 0552                   i2u1191 0550  
+                 _OSCCON 000FD3                   _TIMER0 056C  
+                 _TMR0IE 007F95                   _TMR0IF 007F92  
+                 _TMR0ON 007EAF         __end_of_onTIMER0 0934  
+                 __Ldata 000000                ??___awdiv 0109  
+                 _decine 000006                   _decimi 00000E  
+       ___awdiv@quotient 010B           i2___awdiv@sign 0122  
+      __end_ofi2___awdiv 056C             __mediumconst 030C  
+                 tblptrh 000FF7                   tblptrl 000FF6  
+                 tblptru 000FF8               __accesstop 0080  
+          __end_of_setAD 0704             ?_stampaunita 011C  
+                ??_setAD 0104               _decine7seg 000002  
+             _decimi7seg 00000D                  ?_TIMER0 010E  
+  __end_of_restartTIMER0 08A2                ?_onTIMER0 0102  
+                __Hparam 0126                  __Lparam 0100  
+      __end_of_configPIC 0836        __end_of_enintGLOB 0938  
+                ___awdiv 030C        __end_of_readADCH0 092A  
+                __ramtop 0300                  _restart 00000B  
+             ??_onTIMER0 0102            __Lmediumconst 030C  
+                int_func 0008                i2___awdiv 043C  
+        readADCH0@datoAD 011C                _CapStatus 00000F  
+         __end_of_TIMER0 0682       i2___awdiv@dividend 011D  
+          ??_dividicifre 011C            ??_enintTIMER0 0102  
+          ?_stampadecine 011C            ?_stampadecimi 011C  
+     i2___awdiv@quotient 0123                __Habsbss0 000010  
+             ?i2___awdiv 011D                __Labsbss0 000000  
+               ??_TIMER0 010E           ??_stampadecine 011C  
+         ??_stampadecimi 011C      __end_of_dividicifre 07F8  
+    __end_of_enintTIMER0 0930                 ?___awdiv 0105  
+              _configPIC 07F8                _enintGLOB 0934  
+            __smallconst 0300                _readADCH0 090A  
+            ??i2___awdiv 0121           _setTIMER0CKINT 0836  
+            _dividicifre 0782              _enintTIMER0 092A  
+             ?_configPIC 0102               ?_enintGLOB 0102  
+              _unita7seg 000003               ?_readADCH0 011C  
+      i2___awdiv@divisor 011F        i2___awdiv@counter 0121  
+   __end_of_stampadecine 08E8     __end_of_stampadecimi 090A  
+ __end_of_setTIMER0CKINT 0870            _restartTIMER0 0870  
+               __Hparam1 0126                 __Lparam1 0100  
+              setAD@nbit 0102             __Lsmallconst 0300  
+          ??_stampaunita 011C                 _onTIMER0 0930  
+         ?_restartTIMER0 011C          ?_setTIMER0CKINT 0102  
+               _tensione 000005              ??_configPIC 0102  
+            ??_enintGLOB 0102              ??_readADCH0 011C  
+    __end_of_stampaunita 08C6                 setAD@nch 0103  
+               intlevel2 0938          ??_restartTIMER0 011C  
+           ?_dividicifre 011C  

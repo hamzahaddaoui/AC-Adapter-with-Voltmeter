@@ -1,0 +1,367 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=E:\Voltmetro pic 18f2580\output\progetto.p1
+Folder=Intermediary
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File001]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.p1
+Folder=Intermediary
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File002]
+Location=E:\Voltmetro pic 18f2580\output\progetto.cof
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File003]
+Location=E:\Voltmetro pic 18f2580\output\progetto.hex
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File004]
+Location=E:\Voltmetro pic 18f2580\output\progetto.sym
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File005]
+Location=E:\Voltmetro pic 18f2580\output\progetto.map
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File006]
+Location=E:\Voltmetro pic 18f2580\output\progetto.hxl
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File007]
+Location=E:\Voltmetro pic 18f2580\output\startup.lst
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File008]
+Location=E:\Voltmetro pic 18f2580\output\startup.rlf
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File009]
+Location=E:\Voltmetro pic 18f2580\output\doprnt.p1
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File010]
+Location=E:\Voltmetro pic 18f2580\output\doprnt.pre
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File011]
+Location=E:\Voltmetro pic 18f2580\output\progetto.obj
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File012]
+Location=E:\Voltmetro pic 18f2580\output\progetto.lst
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File013]
+Location=E:\Voltmetro pic 18f2580\output\progetto.rlf
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File014]
+Location=E:\Voltmetro pic 18f2580\output\progetto.sdb
+Folder=Output
+DeviceName=PIC18F2580
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Programmi\HI-TECH Software\PICC-18\9.80\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File015]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.cof
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File016]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.hex
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File017]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.sym
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File018]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.map
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File019]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.hxl
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File020]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\startup.lst
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File021]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\startup.rlf
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File022]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\doprnt.p1
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File023]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\doprnt.pre
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File024]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.obj
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File025]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.lst
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File026]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.rlf
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=
+[File027]
+Location=C:\Users\Consonni.09099\Desktop\Voltmetro_18F2580_18F2420\output\progetto.sdb
+Folder=Output
+DeviceName=PIC18F2420
+LanguageToolSuiteID={507D93FD-16F1-4270-980F-0C7C0207E6D3}
+LanguageToolID={0F51667C-2BAF-4EF8-A2C9-AB83788A793D}
+LanguageToolLocation=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\bin\picc18.exe
+PPAD=$(BINDIR)|.\output||$(TMPDIR)||$(AINDIR)||$(INCDIR)||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|progetto.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=C9=4,3,2,1 FE=38 EC=1 F0=0 EF=1 EE=0 104=0 E9= C4=0 F2= F3= F4= F8=0 F5= F9=0 FA=0 FB=0 C0=1 C1=0 BD=0 BC=0 BB=0 BF=0 BE=0 B8= 101=0 103= 102=0 BA= FF=0 100=0 106=0 109=0 10A=1 10B=0 10C=0 10E=0 10F=1 110=1 118=0 116=0 117= 10D=0 114=-1 113=-1 111=0 115=-1
+TraceCmdString=
+DebugOptions=

@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+FREQMHZ::4	D:\SCUOLA\0PICard\PICbase\progetto.c	12;"	d	line:12	file:
+LED::P25	D:\SCUOLA\0PICard\PICbase\progetto.c	18;"	d	line:18	file:
+OSCINTCKOUT::	D:\SCUOLA\0PICard\PICbase\progetto.c	11;"	d	line:11	file:
+P25OUT::	D:\SCUOLA\0PICard\PICbase\progetto.c	17;"	d	line:17	file:
+caso	D:\SCUOLA\0PICard\PICbase\progetto.c	29;"	v	line:29
+caso2	D:\SCUOLA\0PICard\PICbase\progetto.c	30;"	v	line:30
+main	D:\SCUOLA\0PICard\PICbase\progetto.c	46;"	f	line:46	signature:(void)
+pippo	D:\SCUOLA\0PICard\PICbase\progetto.c	27;"	v	line:27
+pluto	D:\SCUOLA\0PICard\PICbase\progetto.c	28;"	v	line:28
+prova	D:\SCUOLA\0PICard\PICbase\progetto.c	26;"	v	line:26
